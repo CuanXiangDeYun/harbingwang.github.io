@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+  <meta charset="utf-8">
+  
+  <title>Markdown语法 与 Hexo常用指令 | HarbingWang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法 与 Hexo常用指令">
+<meta property="og:url" content="http://yoursite.com/2015/05/05/1402HexoAndMarkdown/index.html">
+<meta property="og:site_name" content="HarbingWang">
+<meta property="og:description" content="Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。">
+<meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2FMark.png">
+<meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Funtitled.png">
+<meta property="og:updated_time" content="2016-06-26T05:43:17.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown语法 与 Hexo常用指令">
+<meta name="twitter:description" content="Markdown是一种超轻量级的标记语言，常用的标记符号不超过十个，相对于更为复杂的HTML标记语言来讲，Markdown实在简便多了，因此学习成本也不是很大。">
+<meta name="twitter:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2FMark.png">
+  
+    <link rel="alternative" href="/atom.xml" title="HarbingWang" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/head.png">
+  
+  
+      <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+          search: true
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.jquery_ui = [false];
+      </script>
+  
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">HarbingWang</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">编码砌字，读思旅行。</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签</a></li>
+                        
+                            <li><a href="/categories/读书笔记/">阅读</a></li>
+                        
+                            <li><a href="/categories/摄影笔记/">摄影</a></li>
+                        
+                            <li><a href="/about/">留言</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:18317897370@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/2958701731/profile?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/HarbingWang" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=45641031" title="网易云音乐"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KVO/">KVO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Socket/">Socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/消息传递/">消息传递</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络编程/">网络编程</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/Harbingwang/">博客园</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.netcan666.com/">Netcan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">90后，巨蟹座普通闷骚男青年！享生活，爱摄影，正在努力奔赴移动前端的征途上。基本生活状态：一个项目两部电脑三餐盒饭只为四千工资搞得五脏俱损六神无主仍然七点起床八点开会处理九个漏洞十分辛苦；十年编码九年加班八面无光忙的七窍生烟到头六亲不认五体投地依旧四肢酸软三更加班只为二个臭钱一生孤苦！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">HarbingWang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">HarbingWang</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">编码砌字，读思旅行。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签</a></li>
+                
+                    <li><a href="/categories/读书笔记/">阅读</a></li>
+                
+                    <li><a href="/categories/摄影笔记/">摄影</a></li>
+                
+                    <li><a href="/about/">留言</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:18317897370@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/2958701731/profile?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/HarbingWang" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=45641031" title="网易云音乐"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-1402HexoAndMarkdown" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/05/05/1402HexoAndMarkdown/" class="article-date">
+      <time datetime="2015-05-05T08:38:10.000Z" itemprop="datePublished">2015-05-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Markdown语法 与 Hexo常用指令
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown</a>是一种超轻量级的<code>标记语言</code>，常用的标记符号不超过十个，相对于更为复杂的<code>HTML标记语言</code>来讲，<code>Markdown</code>实在简便多了，因此学习成本也不是很大。</p>
+<a id="more"></a>
+<p>更多关于Markdown的认识，我们可以参考：<a href="http://sspai.com/25137/" target="_blank" rel="external">认识与入门 Markdown</a></p>
+<h2 id="Markdown工具"><a href="#Markdown工具" class="headerlink" title="Markdown工具"></a>Markdown工具</h2><p>关于支持<strong>Markdown的书写工具</strong>网络上有很多推荐，这里不再一一列举，常用的有：</p>
+<p><strong><a href="http://mouapp.com/" target="_blank" rel="external">Mou</a></strong>：外文世界对 MarkDown 的热衷在 Mac 上可见一斑，目前虽是免费的，但功能性却能比肩同类的收费软件。</p>
+<p><strong><a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text 3</a></strong>：支持 OS X、Windows、Ubuntu 等 UNIX 及 Linux 操作系统，在代码工作者圈内相当出名。</p>
+<p><strong><a href="http://www.markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a></strong>：推荐较多，但是免费版的有些扩展功能受限。</p>
+<p><strong><a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a></strong>：有<strong><a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="external">网页版</a></strong>和<strong><a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">客户端</a></strong>: 支持实时同步预览，编辑器同步滚动，多种系统内置的主题等特点。</p>
+<p><strong><a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a></strong>：是一家由国内初创团队建立的在线文字创作及发布平台。</p>
+<p><strong><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a></strong>：Windows/Mac/Linux 全平台客户端。</p>
+<h2 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h2><h3 id="常见格式及其对应的语法："><a href="#常见格式及其对应的语法：" class="headerlink" title="常见格式及其对应的语法："></a>常见格式及其对应的语法：</h3><p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2FMark.png" alt="Markdown"></p>
+<p><strong>注释与示例:</strong></p>
+<h3 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h3><p>在字体两侧分别加两个星号 ** ， 当然，也能使用快捷键 Ctrl + B 快速加粗；</p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>将需要设置为斜体的文字两端使用一个 * （或者 _ ） 夹起来，快捷键 Ctrl + I ；</p>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>在需要设置删除线的文字两侧加两个波浪线 ~~ 夹起来，可以表示<del>删除文字</del>；</p>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>分割线的语法只需要三个星号<code>*</code>或者三个小短线 <code>-</code> 号，例如：</p>
+<hr>
+<hr>
+<h3 id="外链接"><a href="#外链接" class="headerlink" title="外链接"></a>外链接</h3><p>[描述](链接地址) 为文字添加外链接，可以使用快捷键 Ctrl + L 快速设置；<br>示例： <code>[HarbingWang的博客](http://harbingwang.github.io)</code><br>显示： 这里是<a href="http://harbingwang.github.io" target="_blank" rel="external">HarbingWang的博客</a> 链接。</p>
+<h3 id="内嵌代码"><a href="#内嵌代码" class="headerlink" title="内嵌代码"></a>内嵌代码</h3><p>第一种:引入单行代码出现一个代码框，需要使用键盘左上角的ESC键下面的反单引号夹在文字两侧，两侧各一个就行。</p>
+<p>例如：\<code>Hellow world！</code></p>
+<p>显示：</p>
+<p><code>Hellow world！</code></p>
+<p>第二种：多行代码的引入需要在代码段的前后分别使用三个反单引号</p>
+<p>显示：<br><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span><span class="comment">; i &lt; 100; i++)</span></span><br><span class="line">&#123;</span><br><span class="line">      printf(<span class="string">"hello markdown!\n"</span>)<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="引入内容"><a href="#引入内容" class="headerlink" title="引入内容"></a>引入内容</h3><p>第一种:通过在文字开头添加“&gt;”表示块注释，快捷键使用 Ctrl + Q 例如；</p>
+<blockquote>
+<p>如果你无法简洁的表达你的想法，那只说明你还不够了解它。 – 阿尔伯特·爱因斯坦</p>
+</blockquote>
+<p>第二种: 使用<code>tab键</code>或者<code>四个空格</code></p>
+<pre><code>一个项目两部电脑三餐盒饭只为四千工资搞得五脏俱损六神无主仍然七点起床八点开会处理九个漏洞十分辛苦 
+十年编码九年加班八面无光忙的七窍生烟到头六亲不认五体投地依旧四肢酸软三更加班只为二个臭钱一生孤苦
+</code></pre><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>插入图片的语法与插入链接很像，区别在一个插入图片的时候需要加一个<code>!</code>号</p>
+<p>Markdown语法： ![描述](图片链接地址)</p>
+<p>示例：</p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Funtitled.png" alt="Github"></p>
+<ul>
+<li>插入图片的地址需要图床生成图片外链，这里推荐使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛图床</a>，生成URL地址即可。</li>
+<li>不同Markdown工具下插入图片的方式也有所不同，这里只说明通用做法，具体可参考编辑器的使用说明；</li>
+</ul>
+<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><p>标题是每篇文章中最常用的格式，在Markdown语法中，如果某行文字被定义为标题，只需要在行首加上<code>#</code>符号即可：</p>
+<pre><code>H1 : # Header 1
+H2 : ## Header 2
+H3 : ### Header 3
+H4 : #### Header 4
+H5 : ##### Header 5
+H6 : ###### Header 6
+</code></pre><ul>
+<li>是几级标题就用几个 # 符号，每增加一个 # 表示更深入一个层次的内容，总共有六级标题。</li>
+<li>标准的Markdown语法需要在符号后面多加一个空格，建议加上。</li>
+</ul>
+<p>上面这种设置标题的方式是最为直观的，当然在Markdown语法下，我们也可以通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题，例如:</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">我是一级标题</span><br><span class="line">====</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">我是二级标题</span><br><span class="line">----</span></span><br></pre></td></tr></table></figure>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用一个 <code>*</code>，<code>+</code>或<code>-</code> 表示无序列表。</p>
+<p>示例：</p>
+<ul>
+<li>无序列表项 一</li>
+<li>无序列表项 二</li>
+<li>无序列表项 三</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用数字和英文句点表示有序列表, 不要求数字一定要连续。</p>
+<p>示例：</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<h3 id="绘制表格"><a href="#绘制表格" class="headerlink" title="绘制表格"></a>绘制表格</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Tables        </span>|<span class="string"> Are           </span>|<span class="string"> Cool  </span>|</span><br><span class="line">|<span class="string"> ------------- </span>|<span class="string">:-------------:</span>|<span class="string"> -----:</span>|</span><br><span class="line">|<span class="string"> col 3 is      </span>|<span class="string"> right-aligned </span>|<span class="string"> $1600 </span>|</span><br><span class="line">|<span class="string"> col 2 is      </span>|<span class="string"> centered      </span>|<span class="string">   $12 </span>|</span><br><span class="line">|<span class="string"> zebra stripes </span>|<span class="string"> are neat      </span>|<span class="string">    $1 </span>|</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h3><p>Markdown 支持在以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<pre><code>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+</code></pre><p><strong> 以上的Markdown语法基本上足够我们书写一篇博客了，关于Markdown的高级用法，包括通过Markdown创建公式，绘制流程图等请参考本文底部的 Reference相关；</strong></p>
+<hr>
+<h2 id="Hexo常用指令"><a href="#Hexo常用指令" class="headerlink" title="Hexo常用指令"></a>Hexo常用指令</h2><p>以下关于Hexo常用指令的整理，要想熟练使用一个工具，首先就要熟练掌握他的相关指令，以便操控这一工具。下面将着重介绍几条常用的 Hexo 指令：</p>
+<h3 id="1、新建文章"><a href="#1、新建文章" class="headerlink" title="1、新建文章"></a>1、新建文章</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> articleName</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>　<strong>Note：</strong></p>
+<ul>
+<li>新建一篇题为“articleName”的文章，此时会在E/Hexo/source/_posts/目录下生成一份articleName.md 的文件，使用Notepad++、小书匠、MarkdownPad2等编辑工具打开即能书写；</li>
+<li>提示信息：INFO  Created: E:\Hexo\source_posts\articleName.md </li>
+<li>如果标题包含空格，需要使用双引号括起来</li>
+</ul>
+</blockquote>
+<h3 id="2、新建页面"><a href="#2、新建页面" class="headerlink" title="2、新建页面"></a>2、新建页面</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page pageName</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>　<strong>Note：</strong></p>
+<ul>
+<li>新建一个题为“pageName”的页面，此时会在E:\Hexo\source\目录下生成一个名为pageName的文件夹，其中包含一份 index 的md文件；</li>
+<li>提示信息：INFO  Created: E:\Hexo\source\pageName\index.md</li>
+<li>同样地，如果语句中包含空格，需要使用双引号括起来</li>
+</ul>
+</blockquote>
+<h3 id="3、生成静态页面"><a href="#3、生成静态页面" class="headerlink" title="3、生成静态页面"></a>3、生成静态页面</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">ge</span><span class="symbol">nerate</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>启动该条指令后会将当前网页的内容生成静态页面到public目录下</li>
+<li>提示信息：<br>  INFO  Start processing<br>  INFO  Files loaded in 595 ms<br>  INFO  0 files generated in 612 ms</li>
+</ul>
+</blockquote>
+<h3 id="4、开启本地服务器端口"><a href="#4、开启本地服务器端口" class="headerlink" title="4、开启本地服务器端口"></a>4、开启本地服务器端口</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>开启预览访问的端口，默认端口为4000</li>
+<li>关闭server使用 ctrl + c  </li>
+<li>提示信息：<br>  INFO  Start processing<br>  INFO  Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.</li>
+<li>在使用hexo server 可能会遇到端口被占用的情况，不妨使用以下指令来更改端口</li>
+</ul>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -<span class="selector-tag">p</span> <span class="number">4001</span></span><br></pre></td></tr></table></figure>
+<h3 id="5、部署到Github"><a href="#5、部署到Github" class="headerlink" title="5、部署到Github"></a>5、部署到Github</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> deploy</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>将 E/Hexo/目录下的 .deploy_git 文件夹部署到Github</li>
+<li>部署前需要预先 hexo generate 生成静态文件</li>
+<li>关闭server使用 ctrl + c  </li>
+<li>提示信息：<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>…..部署的文件<br>To git@github.com:HarbingWang/harbingwang.github.io.git<br> da818a3..e4e53c6  HEAD -&gt; master<br>INFO  Deploy done: git  # 当看到 “INFO  Deploy done: git”时即表示部署已经完成；</li>
+</ul>
+</blockquote>
+<h3 id="6、清除文件"><a href="#6、清除文件" class="headerlink" title="6、清除文件"></a>6、清除文件</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>清除E/Hexo目录下的缓存文件（db.json）和已经生成的静态文件（public）文件</li>
+<li>网页正常情况下可以忽略此条命令</li>
+</ul>
+</blockquote>
+<h3 id="7、查看Hexo版本"><a href="#7、查看Hexo版本" class="headerlink" title="7、查看Hexo版本"></a>7、查看Hexo版本</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>查看当前使用的Hexo的版本号</li>
+<li>提示信息：<br>hexo: 3.2.0<br>hexo-cli: 1.0.1<br>os: Windows_NT 6.1.7601 win32 x64<br>http_parser: 2.6.2<br>node: 5.10.0<br>v8: 4.6.85.31<br>uv: 1.8.0<br>zlib: 1.2.8<br>ares: 1.10.1-DEV<br>icu: 56.1<br>modules: 47<br>openssl: 1.0.2g</li>
+</ul>
+</blockquote>
+<h2 id="复合指令"><a href="#复合指令" class="headerlink" title="复合指令"></a>复合指令</h2><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -<span class="keyword">d</span>   </span><br><span class="line">hexo <span class="keyword">s</span> -<span class="keyword">d</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>hexo g -d  # 等价于 hexo generate –deploy ：生成静态文件并部署</li>
+<li>hexo s -d  # 等价于 hexo deploy –generate ：开启预览并部署到Github</li>
+</ul>
+</blockquote>
+<h2 id="简写形式"><a href="#简写形式" class="headerlink" title="简写形式"></a>简写形式</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> n <span class="comment">#等价于 hexo new</span></span><br><span class="line">hexo g <span class="comment">#等价于 hexo generate</span></span><br><span class="line">hexo s <span class="comment">#等价于 hexo server</span></span><br><span class="line">hexo d <span class="comment">#等价于 hexo deploy</span></span><br><span class="line">hexo v <span class="comment">#等价于 hexo version</span></span><br></pre></td></tr></table></figure>
+<h2 id="如何卸载Hexo？"><a href="#如何卸载Hexo？" class="headerlink" title="如何卸载Hexo？"></a>如何卸载Hexo？</h2><blockquote>
+<p>3.0.0版本执行npm uninstall hexo-cli -g，之前版本执行npm uninstall hexo -g</p>
+</blockquote>
+<p>##　如何安装旧版本Hexo？</p>
+<blockquote>
+<p>　先卸载当前版本，以2.8.3为例，执行npm install hexo@2.8.3 -g，再初始化并安装依赖和插件。</p>
+</blockquote>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>整理过程中难免有所疏漏，失误之处还请指正，更多详细内容请参考：</p>
+<ul>
+<li><a href="http://sspai.com/25137/" target="_blank" rel="external">认识与入门 Markdown</a></li>
+<li><a href="http://sspai.com/27792" target="_blank" rel="external">解决作者们的焦虑：7 款优秀 Markdown 编辑工具推荐</a></li>
+<li><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></li>
+<li><a href="http://www.wikimilk.org/markdown-guide/" target="_blank" rel="external">Markdown：指南</a></li>
+<li><a href="https://segmentfault.com/a/1190000002632530?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">hexo常用命令笔记</a>   【<strong>推荐</strong>】</li>
+<li><a href="http://wiki.jikexueyuan.com/project/hexo-document/commands.html" target="_blank" rel="external">极客学院Hexo中文版指令</a>   【<strong>推荐</strong>】</li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2015/10/22/1503iOS中的消息传递机制/">
+                    iOS中的消息传递机制
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/01/11/1502TheUsageOfGitBash/">
+                    Git使用手册
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown工具"><span class="toc-number">1.</span> <span class="toc-text">Markdown工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用语法"><span class="toc-number">2.</span> <span class="toc-text">常用语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见格式及其对应的语法："><span class="toc-number">2.1.</span> <span class="toc-text">常见格式及其对应的语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#粗体"><span class="toc-number">2.2.</span> <span class="toc-text">粗体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斜体"><span class="toc-number">2.3.</span> <span class="toc-text">斜体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除线"><span class="toc-number">2.4.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分割线"><span class="toc-number">2.5.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外链接"><span class="toc-number">2.6.</span> <span class="toc-text">外链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内嵌代码"><span class="toc-number">2.7.</span> <span class="toc-text">内嵌代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入内容"><span class="toc-number">2.8.</span> <span class="toc-text">引入内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入图片"><span class="toc-number">2.9.</span> <span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分级标题"><span class="toc-number">2.10.</span> <span class="toc-text">分级标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无序列表"><span class="toc-number">2.11.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有序列表"><span class="toc-number">2.12.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绘制表格"><span class="toc-number">2.13.</span> <span class="toc-text">绘制表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反斜杠"><span class="toc-number">2.14.</span> <span class="toc-text">反斜杠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo常用指令"><span class="toc-number">3.</span> <span class="toc-text">Hexo常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、新建文章"><span class="toc-number">3.1.</span> <span class="toc-text">1、新建文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、新建页面"><span class="toc-number">3.2.</span> <span class="toc-text">2、新建页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、生成静态页面"><span class="toc-number">3.3.</span> <span class="toc-text">3、生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、开启本地服务器端口"><span class="toc-number">3.4.</span> <span class="toc-text">4、开启本地服务器端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、部署到Github"><span class="toc-number">3.5.</span> <span class="toc-text">5、部署到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、清除文件"><span class="toc-number">3.6.</span> <span class="toc-text">6、清除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、查看Hexo版本"><span class="toc-number">3.7.</span> <span class="toc-text">7、查看Hexo版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复合指令"><span class="toc-number">4.</span> <span class="toc-text">复合指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简写形式"><span class="toc-number">5.</span> <span class="toc-text">简写形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何卸载Hexo？"><span class="toc-number">6.</span> <span class="toc-text">如何卸载Hexo？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">7.</span> <span class="toc-text">Reference</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Markdown语法 与 Hexo常用指令　| HarbingWang　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/05/05/1402HexoAndMarkdown/" data-title="Markdown语法 与 Hexo常用指令" data-url="http://yoursite.com/2015/05/05/1402HexoAndMarkdown/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"HarbingWang"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/10/22/1503iOS中的消息传递机制/" title="上一篇: iOS中的消息传递机制">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/01/11/1502TheUsageOfGitBash/" title="下一篇: Git使用手册">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/20160624初探网络编程之HTTP、TCPIP及Socket基础/">20160624初探网络编程之HTTP、TCPIP及Socket基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/深圳/">深圳</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/《岛上书店》/">《岛上书店》</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/1601初探网络编程之HTTP、TCPIP及Socket基础/">初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/22/1503iOS中的消息传递机制/">iOS中的消息传递机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/05/1402HexoAndMarkdown/">Markdown语法 与 Hexo常用指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/11/1502TheUsageOfGitBash/">Git使用手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/01/1501HexoWithGithub/">Hexo搭建静态博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/01/01/1401PersonalBlogProgressing/">个人博客搭建与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/01/01/201601PersonalBlogProgressing/">个人博客搭建与优化</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2014-2016 HarbingWang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo强力驱动</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.0">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
