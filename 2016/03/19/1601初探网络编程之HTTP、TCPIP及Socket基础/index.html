@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2F%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B.gif">
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FIP%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.jpg">
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FTCP%E9%93%BE%E6%8E%A5.gif">
-<meta property="og:updated_time" content="2016-06-26T05:23:29.813Z">
+<meta property="og:updated_time" content="2016-06-29T17:04:14.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础">
 <meta name="twitter:description" content="最近在做网络编程的时候对HTTP、TCP/IP、Socket等几个概念有所困惑，虽然之前也有所接触但始终未深入了解，遂决心整理下这方面的知识，以加深理解。">
@@ -135,13 +135,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -263,7 +263,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-1601初探网络编程之HTTP、TCPIP及Socket基础" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -341,6 +341,21 @@
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/19/1601初探网络编程之HTTP、TCPIP及Socket基础/">初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">HarbingWang</a></p>
+        <p><span>发布时间:</span>2016-03-19, 12:44:26</p>
+        <p><span>最后更新:</span>2016-06-30, 01:04:14</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/19/1601初探网络编程之HTTP、TCPIP及Socket基础/" title="初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础">http://yoursite.com/2016/03/19/1601初探网络编程之HTTP、TCPIP及Socket基础/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/19/1601初探网络编程之HTTP、TCPIP及Socket基础/　　作者: HarbingWang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
 
 
     <nav id="article-nav">
@@ -364,7 +379,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP协议中的几个重要的概念"><span class="toc-number">2.</span> <span class="toc-text">TCP/IP协议中的几个重要的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP协议与IP地址"><span class="toc-number">3.</span> <span class="toc-text">IP协议与IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-UDP协议"><span class="toc-number">4.</span> <span class="toc-text">TCP/UDP协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP协议和UDP协议的区别："><span class="toc-number">5.</span> <span class="toc-text">TCP协议和UDP协议的区别：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Socket套接字"><span class="toc-number">6.</span> <span class="toc-text">Socket套接字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Http相关"><span class="toc-number">7.</span> <span class="toc-text">Http相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Http与TCP、Scoket的区别"><span class="toc-number">8.</span> <span class="toc-text">Http与TCP、Scoket的区别</span></a></li></ol>
 </div>
 <style>
@@ -376,10 +391,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 <script>
-    var valueHide = "Hide";
-    var valueShow = "Show";
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -442,7 +457,7 @@
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
-    var duoshuoQuery = {short_name:"HarbingWang"};
+    var duoshuoQuery = {short_name:"harbingwang1"};
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
@@ -462,15 +477,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/27/《岛上书店》/" title="Pre: 《岛上书店》">
+            <a href="/2016/06/27/《岛上书店》/" title="上一篇: 《岛上书店》">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/10/22/1503iOS中的消息传递机制/" title="Next: iOS中的消息传递机制">
+            <a href="/2015/10/22/1503iOS中的消息传递机制/" title="下一篇: iOS中的消息传递机制">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -490,17 +505,17 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2014-2016 HarbingWang
+                2015-2016 HarbingWang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo强力驱动</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.0">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo强力驱动</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.0">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -510,7 +525,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -564,9 +579,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
