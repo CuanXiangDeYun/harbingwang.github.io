@@ -396,9 +396,9 @@ _   底线
       <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
@@ -611,11 +611,11 @@ _   底线
       <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
-    
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
   </entry>
   
@@ -672,11 +672,11 @@ _   底线
       <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
-    
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
   </entry>
   

@@ -631,13 +631,17 @@ _   底线
     <div id="comment-box" ></div>
     <div class="ds-thread" id="ds-thread" data-thread-key="2015/05/05/1402HexoAndMarkdown/" data-title="Markdown语法 与 Hexo常用指令" data-url="http://yoursite.com/2015/05/05/1402HexoAndMarkdown/"></div>
     <script>
-        var duoshuoQuery = {short_name:"harbingwang1"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = 'http://harbingwang.github.io/resources/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
+        var duoshuoQuery = {short_name:"[object Object]"};
+		(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+
+		ds.src = 'https://github.com/HarbingWang/harbingwang.github.io/blob/master/js/embed.js';
+		/*上面是我自己的 embed.js 链接，请改为你自己的地址*/
+
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
 
         
             // Add comment count
