@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title></title>
+      <url>http://yoursite.com/2016/06/27/20160624%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BHTTP%E3%80%81TCPIP%E5%8F%8ASocket%E5%9F%BA%E7%A1%80/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[深圳]]></title>
+      <url>http://yoursite.com/2016/06/27/%E6%B7%B1%E5%9C%B3/</url>
+      <content type="html"><![CDATA[<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%2F20160626.jpg" alt="深圳机场"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《岛上书店》]]></title>
+      <url>http://yoursite.com/2016/06/27/%E3%80%8A%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97%E3%80%8B/</url>
+      <content type="html"><![CDATA[<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%2F%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97.jpg" alt="岛上书店"><br>岛上书店是间维多利亚风格的小屋，门廊上挂着褪色的招牌，上面写着：</p>
+<blockquote>
+<p>没有谁是一座孤岛，每本书都是一个世界。</p>
+</blockquote>
+<a id="more"></a>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础]]></title>
+      <url>http://yoursite.com/2016/03/19/1601%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BHTTP%E3%80%81TCPIP%E5%8F%8ASocket%E5%9F%BA%E7%A1%80/</url>
+      <content type="html"><![CDATA[<p>最近在做网络编程的时候对HTTP、TCP/IP、Socket等几个概念有所困惑，虽然之前也有所接触但始终未深入了解，遂决心整理下这方面的知识，以加深理解。</p>
+<a id="more"></a>
+<p>文章参考了诸多大神的博客和一定的计算机网络书籍，只做知识整理巩固之用，内容相对基础，大神请绕道而过。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文中，我们首先由国际标准化组织提出的开放式系统互联参考模型为引子，简单了解HTTP、TCP/IP在该模型中的位置，随后将着重讲述一个完整HTTP请求与响应所包含的几个必要的元素，以及不同HTTP协议各版本之间的差异，HTTP与HTTPS之间的联系与区别，最后，我们将阐述HTTP、TCP、UDP与Socket等相关概念极其之间的联系。<br>OSI参考模型与TCP/IP模型<br>首先，我们简单了解一下OSI参考模型的相关知识，相信有兴趣点开此篇文章的朋友或多或少已经对这两个模型有所了解。<br>国际标准化组织（International Organization for Standardization，ISO）为了更好地普及网络应用，希望不同的网络厂商都用相同的规范进行网络控制生产网络设备，使生产出来的设备能够相互之间协同工作，于是推出了开放式系统互联（Open System Interconnect，OSI）参考模型，该参考模型定义了网络互联的七层框架，从下到上依次是：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。如下图所示：</p>
+<p>在七层模型中，每一层都提供一个特殊的网络功能。从网络功能的角度来讲：低层协议（物理层、数据链路层、网络层、传输层）主要定义了数据传输和交换功能，以节点到节点之间的通讯为主；而高层协议（会话层、表示层、应用层）则定义了网络数据的格式和网络应用，以信息和数据处理为主。第四层传输层作为上下两部分的桥梁，是整个网络体系结构中最为关键的部分。OSI模型用途相当广泛。比如交换机、集线器、路由器等很多网络设备的设计都是参照OSI模型设计的。<br>值得注意的是，OSI参考模型并不是一个标准，而是一个在制定标准时所使用的概念性框架，它概念性地描述了协议之间应该如何相互协同工作，并没有提供具体的实现方法。在实际的网络控制中，真正使用的是TCP/IP协议。<br>TCP/IP字面上代表了传输控制协议（Transmission Control Protocol，TCP）和互联网协议（Internet Protocol，IP）。实际上，TCP/IP协议指的是一个协议族，它是一个具有四层结构的协议系统，由若干协议组成。这四个层次由低到高依次是：网络接口层、网络层、传输层和应用层。我们把这样的协议组合称为TCP/IP协议栈，也称之为TCP/IP模型。</p>
+<p>TCP/IP模型的每层分别具有不同的协议和功能，各层在实现自身功能时，使用它的直接下层所提供的服务，同时也为它的直接上层提供服务。简单来讲，这四层结构的功能分别是：<br>1)网络接口层(Network Access Layer)：网络层负责建立电路连接，是整个网络的物理基础。由于在设计该模型时注重的是网络互联，允许通讯子网（网络接口层）采用已有的或者将来的各种协议，所以在这层并没有提供专门的协议，只要求能够为其上层（网络层）提供一个可以访问的接口。<br>2)网络层(Internet Layer)：网络层是整个TCP/IP协议栈的核心，它定义了分组格式和协议，主要负责分配地址和传送二进制数据。网络层的主要协议有IP、ICMP（Internet Control Message Protocol，互联网控制报文协议）、IGMP（Internet Group Management Protocol，互联网组管理协议）、ARP（Address Resolution Protocol，地址解析协议）和RARP（Reverse Address Resolution Protocol，反向地址解析协议）等。<br>3)传输层(Transport Layer)：传输层的基本功能是为两台主机间的应用程序提供端到端的通信。传输层从应用层接收数据，并且在必要的时候把它分成较小的单元，传递给网络层，并确保到达对方的各段信息正确无误。传输层的主要协议有TCP (Transmission Control Protocol，传输控制协议)和UDP（User Datagram Protocol，用户数据报协议）。<br>4)应用层(Application Layer)：应用层负责处理特定的应用程序细节，是直接与用户打交道的层。应用层显示接收到的信息，把用户的数据发送到低层(传输层)，为应用软件提供网络接口。应用层包含大量常用的应用程序，常用的协议有HTTP（Hyper Text Transfer Protocol超文本传输协议）、Telnet（远程登录）、FTP（File Transfer Protocol）等。</p>
+<p>TCP/IP协议的特点：<br>1、TCP/IP协议不依赖于任何特定的计算机硬件或者操作系统，提供开放的协议标准。<br>2、TCP/IP协议不依赖于特定的网络传输硬件，所以TCP/IP协议可以通过网络接口层集成各种各样的网络，用户能够使用以太网（Ethernet）、令牌环网（Token Ring Network）、拨号线路（Dial-up line）、X.25网以及所有的网络传输硬件。<br>3、由于在网络层中需要通过IP协议分配地址，通过这种统一的地址分配方案，使得整个TCP/IP设备在全球互联网中具有唯一的地址。<br>4、标准化的高层协议，可以提供多种可靠的用户服务。</p>
+<p>TCP/IP协议数据的封装过程<br>    在了解完TCP/IP模型的分层之后，接下来我们将从IP协议讲起，并逐渐过渡到TCP/UDP协议，着重讲述下他们之间的区别。最后我们将会详细分析HTTP相关的知识。在此之前，我们首先看一下TCP/IP协议数据传输的封装过程。具体如下图：<br>    <img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2F%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B.gif" alt="数据封装过程"><br>应用层数据通过协议栈发到网络上时，每层协议都要加上一个数据首部（header），称为封装（Encapsulation）。每个协议层都有数据包，不同的协议层对数据包也有不同的称谓，在传输层叫做段（segment），在网络层叫做数据报（datagram），在链路层叫做帧（frame）。应用层数据通过协议栈被逐层封装成帧后发到传输介质上，想要到达目的主机，需要在每层协议再剥掉相应的首部，最后将应用层数据交给应用程序处理。</p>
+<p>上图对应的是两台计算机在同一网段中的情况，如果两台计算机在不同的网段（这里以以太网和令牌环为例）中，那么数据从一台计算机到另一台计算机传输过程中要经过一个或多个路由器，如下图所示：</p>
+<p>网络层的IP协议是构成Internet的基础。Internet上的主机通过IP地址来标识，Internet上有大量路由器负责根据IP地址选择合适的路径来转发数据包，数据包从Internet上的源主机到目的主机往往要经过十多个路由器。路由器是工作在第三层的网络设备，同时兼有交换机的功能，可以在不同的链路层接口之间转发数据包，因此路由器需要将进来的数据包拆掉网络层和链路层两层首部并重新封装。IP协议不保证传输的可靠性，数据包在传输过程中可能丢失，可靠性可以在上层协议或应用程序中提供支持。<br>网络层负责点到点（point-to-point）的传输（这里的“点”指主机或路由器），而传输层负责端到端（end-to-end）的传输（这里的“端”指源主机和目的主机）。传输层可选择TCP或UDP协议。关于TCP/UDP的相关概念，将会在下面的相关概念中加以阐述。<br>主机（路由器）收到数据包后总不能将已经分装好的数据包发送给用户的应用程序吧？那么问题来了，数据如何经过各层协议栈最后到达应用程序呢？整个过程如下图所示：</p>
+<p>以太网驱动程序首先根据以太网首部中的“上层协议”字段确定该数据帧的有效载荷（payload，指除去协议首部之外实际传输的数据）是IP、ARP还是RARP协议的数据报，然后交给相应的协议处理。假如是IP数据报，IP协议再根据IP首部中的“上层协议”字段确定该数据报的有效载荷是TCP、UDP、ICMP还是IGMP，然后交给相应的协议处理。假如是TCP段或UDP段，TCP或UDP协议再根据TCP首部或UDP首部的“端口号”字段确定应该将应用层数据交给哪个用户进程。IP地址是标识网络中不同主机的地址，而端口号就是同一台主机上标识不同进程的地址，IP地址和端口号合起来标识网络中唯一的进程，“IP地址+端口号”也就是我们常见的Socket，在下面将会详细讲述。<br>注意，虽然IP、ARP和RARP数据报都需要以太网驱动程序来封装成帧，但是从功能上划分，ARP和RARP属于链路层，IP属于网络层。虽然ICMP、IGMP、TCP、UDP的数据都需要IP协议来封装成数据报，但是从功能上划分，ICMP、IGMP与IP同属于网络层，TCP和UDP属于传输层。</p>
+<h2 id="TCP-IP协议中的几个重要的概念"><a href="#TCP-IP协议中的几个重要的概念" class="headerlink" title="TCP/IP协议中的几个重要的概念"></a>TCP/IP协议中的几个重要的概念</h2><h2 id="IP协议与IP地址"><a href="#IP协议与IP地址" class="headerlink" title="IP协议与IP地址"></a>IP协议与IP地址</h2><p>IP协议作为TCP/IP协议的核心之一，它的主要作用是屏蔽所有低层的具体细节，向上层提供统一的通信服务。其中的核心是数据报路由，这一点主要体现在：路由器需要将进来的数据包拆掉网络层和链路层两层首部并重新封装。<br>    IP协议的特点是使用IP地址用于标识计算机所属的网络及主机号，以确定计算机的位置，实现寻址。<br>    IP协议规定了数据包的格式，路由器处理转发的机制等。<br>    IP协议规定网络中每个节点都有一个唯一的数字地址（IP地址）。</p>
+<p>IP地址是唯一标示一台网络设备的，IP地址实际上在互联网上它是一种逻辑地址，它不是一个硬件地址，这个逻辑地址通常是一个网络设备的身份。</p>
+<p>目前使用的IP地址是一个32位的二进制数，通常分为4个8位的二进制，然后转换成4个十进制数（方便计算机操作人员使用），每个数的取值范围都是0~255，彼此间用“.”隔开<br>32位的IP地址构成如下图所示：<br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FIP%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.jpg" alt="1"><br>互联网中，每个IP地址都是唯一不可重复的，互联网中每个主机都属于某个网络，为了进行互联网中主机的识别，将IP地址分为：网络号＋主机号，两部分（就像身份证号码，每段数值都有特定含义）。</p>
+<h2 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h2><p>1）传输控制协议(Transmission Control Protocol , TCP协议）<br>TCP面向高层应用提供了全双工的、确认重传的、带控制流的传输服务，它允许数据包无差错地、可靠地传到目的主机。TCP可以同时支持不同高层协议的应用。<br>    全双工是指在发送数据的同时也能够接收数据，两者同步进行，这好像我们平时打电话一样，说话的同时也能够听到对方的声音。<br>2）用户数据报协议（User Data Protocol , UDP协议）<br>UDP协议在传输层上提供无连接的数据报传输，他不能保证数据包一定能够到达目的主机，也就是说他不能解决诸如报文丢失、重复、失序、流控等问题。传输的可靠性靠应用层的协议来保证。UDP本身忽略可靠性，而优先考虑传输速度的问题，因此其传输效率较TCP高。<br>通俗点讲，TCP是一种面向连接的、可靠的协议。有点像打电话，双方拿起电话互通身份之后就建立了连接，然后说话就行，这边说的话那边保证听得到，并且是按说话的顺序听到的，说完话挂机就断开连接。也就是说TCP传输的双方需要首先建立连接，之后由TCP协议保证数据收发的可靠性，丢失的数据包会自动重新发送，上层应用程序收到的总是可靠的数据流，通讯之后关闭连接。UDP协议不面向连接，也不能保证可靠性，有点像寄信，写好信放到邮筒里，既不能保证信件在邮递过程中不会丢失，也不能保证信件是否按顺序寄到目的地。使用UDP协议的应用程序需要自己完成丢包的重发、消息排序等工作。</p>
+<p>在简单了解完TCP、UDP之后，我们介绍下两种协议的基本原理与通讯原理。<br>1）TCP协议原理：<br>TCP协议提供了面向连接的、可靠的字节流服务。在传输数据流前，双方会先建立一条虚拟的通信道。一个TCP连接必须要经过三次“对话”才能建立起来，一为请求连接，二为同步要求，三为确认发送。TCP连接过程如下图：<br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FTCP%E9%93%BE%E6%8E%A5.gif" alt="TCP三次握手"></p>
+<p>第一次握手：客户端发送syn包(syn=a)到服务器，并进入SYN_SEND状态，等待服务器确认;<br>第二次握手：服务器收到syn包，必须确认客户的SYN(ack=a+1)，同时自己也发送一个SYN包(syn=b)，即SYN+ACK包，此时服务器进入SYN_RECV状态;<br>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=b+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。<br>握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。<br>理想状态下，TCP连接一旦建立，在通信双方中的任何一方主动关闭连接之前，TCP 连接都将被一直保持下去。<br>断开连接时服务器和客户端均可以主动发起断开TCP连接的请求，断开过程需要经过“四次握手”。</p>
+<p>2）UDP协议原理：<br>UDP协议是将网络数据量压缩成数据包的形式在网络中进行传输，是一种无连接的协议。使用UDP传输数据时，每个数据段都是一个独立的信息，包括完整的源地址和目的地，在网络上以任何可能的路径传到目的地，因此，能否到达目的地，以及到达目的地的时间和内容的完整性都不能保证。</p>
+<h2 id="TCP协议和UDP协议的区别："><a href="#TCP协议和UDP协议的区别：" class="headerlink" title="TCP协议和UDP协议的区别："></a>TCP协议和UDP协议的区别：</h2><p>TCP是面向连接的可靠的协议，适用于传输大批量的文件。它提供有效流控、全双工操作和多路复用的服务。<br>UDP适用于一次只传送少量数据、对可靠性要求不高、对速度要求很高的应用环境（如在线视频）。UDP协议是面向非连接的协议，没有建立连接的过程。正因为UDP协议没有连接的过程，所花时间少，此外它的数据密度大，所以它的通信效率高，实时行很好。<br>此外TCP不能发送广播和组播，只能单播，而UDP可以广播和组播。TCP的传输模式是流模式，UDP的是数据报模式。TCP占用的系统资源较多。UDP段结构比TCP的简单，网络开销小。<br>TCP是流式协议，即数据包是没有边界的，需要自己识别。可以把发TCP数据包的动作理解成往对端用管子灌水。水就是数据包，它们之间没有边界；UDP是面向消息的，每个包是有边界的。可以把发UDP数据包的动作理解成往对端滚玻璃球。每个玻璃球是一个数据包，它们之间有明显的边界。而且由于每个玻璃球的速度可能不一样，先滚的不一定先到，所以需要自己处理乱序。<br>总之，速度和可靠性只能二选一，目前最常用的协议是TCP/IP 协议和UDP 协议。而其他的如RMI，SOAP，FTP ，等协议都可以说是构建在这两者之上的。<br>知道了TCP和UDP的区别，就不难理解为何采用TCP传输协议的MSN比采用UDP的QQ传输文件慢了，但并不能说QQ的通信是不安全的，因为程序员可以手动对UDP的数据收发进行验证，比如发送方对每个数据包进行编号然后由接收方进行验证啊什么的，即使是这样，UDP因为在底层协议的封装上没有采用类似TCP的“三次握手”而实现了TCP所无法达到的传输效率。</p>
+<h2 id="Socket套接字"><a href="#Socket套接字" class="headerlink" title="Socket套接字"></a>Socket套接字</h2><p>首先，我们通过一张图来了解下Socket在哪个位置？</p>
+<p>Socket又称之为“套接字”，它是系统提供的一种用于网络通讯的方法，其实质并不是一种协议，只是给程序员提供了一个发送消息的接口，程序员使用这个接口提供的方法向网络发出请求或者应答网络的请求。<br>总结：Socket是对TCP/IP协议的封装，Socket本身并不是协议，而是一个调用接口（API）。</p>
+<p>1)    Socket原理<br>套接字是通信的基石，是支持TCP/IP协议的网络通信的基本操作单元。应用层通过传输层进行数据通信时，TCP会遇到同时为多个应用程序进程提供并发服务的问题。多个TCP连接或多个应用程序进程可能需要通过同一个 TCP协议端口传输数据。为了区别不同的应用程序进程和连接，许多计算机操作系统为应用程序与TCP／IP协议交互提供了套接字(Socket)接口。应 用层可以和传输层通过Socket接口，区分来自不同应用程序进程或网络连接的通信，实现数据传输的并发服务。</p>
+<p>2）利用Socket建立网络连接的步骤<br>建立Socket连接至少需要一对套接字，其中一个运行于客户端，称为ClientSocket ，另一个运行于服务器端，称为ServerSocket 。<br>套接字之间的连接过程分为三个步骤：服务器监听，客户端请求，连接确认。<br>服务器监听：服务器端套接字并不定位具体的客户端套接字，而是处于等待连接的状态，实时监控网络状态，等待客户端的连接请求。<br>客户端请求：指客户端的套接字提出连接请求，要连接的目标是服务器端的套接字。为此，客户端的套接字必须首先描述它要连接的服务器的套接字，指出服务器端套接字的地址和端口号，然后就向服务器端套接字提出连接请求。<br>连接确认：当服务器端套接字监听到或者说接收到客户端套接字的连接请求时，就响应客户端套接字的请求，建立一个新的线程，把服务器端套接字的描述发给客户 端，一旦客户端确认了此描述，双方就正式建立连接。而服务器端套接字继续处于监听状态，继续接收其他客户端套接字的连接请求。</p>
+<h2 id="Http相关"><a href="#Http相关" class="headerlink" title="Http相关"></a>Http相关</h2><p>1）    Http协议<br>Http协议即超文本传输协议(Hypertext Transfer Protocal，HTTP),它是一个基于请求-响应模式的无状态的应用层协议。<br>从名字上可以看出该协议用于规定客户端与服务端之间的传输规则，所传输的内容不局限于文本(其实可以传输任意类型的数据)。</p>
+<p>2）    Http请求与响应的内容<br>1、请求行<br>请求行包含请求方法(Method)、请求统一资源标识符(URI)、HTTP版本号，如图2.1第一行所示：</p>
+<p>图2.2 请求行.png<br>•    请求方法就是我们所熟悉的POST、GET、HEAD、PUT等<br>•    URI就是URL中排除掉Host剩下的部分，也就是资源在服务器本地上的路径<br>•    HTTP版本号，目前主流的版本是1.1(1999年开始采用)，最新的版本是2.0(2015年5月发布)。不同版本之间差异下面会再展开<br>2、请求头<br>请求头主要存放对客户端想给服务端的附加信息，下图框框的部分就是请求头：</p>
+<p>图2.3 请求头.png<br>HTTP请求在iOS中用NSURLRequest与NSMutableRequest表示；HTTP响应用NSHTTPURLResponse表示。<br>•    Host: 目标服务器的网络地址<br>•    Accept: 让服务端知道客户端所能接收的数据类型，如text/html <em>/</em><br>•    Content-Type: body中的数据类型，如application/json; charset=UTF-8<br>•    Accept-Language: 客户端的语言环境，如zh-cn<br>•    Accept-Encoding: 客户端支持的数据压缩格式，如gzip<br>•    User-Agent: 客户端的软件环境，我们可以更改该字段为自己客户端的名字，比如QQ music v1.11，比如浏览器Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Maxthon/4.5.2<br>•    Connection: keep-alive，该字段是从HTTP 1.1才开始有的，用来告诉服务端这是一个持久连接，“请服务端不要在发出响应后立即断开TCP连接”。关于该字段的更多解释将在后面的HTTP版本简介中展开。<br>•    Content-Length: body的长度，如果body为空则该字段值为0。该字段一般在POST请求中才会有。<br>POST请求的body请求体也有可能是空的，因此POST中Content-Length也有可能为0<br>•    Cookie: 记录者用户信息的保存在本地的用户数据，如果有会被自动附上<br>值得一提的是，在iOS中当你发送一个任意请求时，不管你愿不愿意，NSURLRequest都会自动帮你记录你所访问的URL上设置的cookie。在iOS中用NSHTTPCookieStorage表示，是一个单例。通过<br>1<br>2<br>3<br>4    NSHTTPCookieStorage <em>cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];<br>for (NSHTTPCookie </em>cookie in [cookieJar cookies]) {<br> NSLog(@”%@”, cookie);<br>}<br>可以获取目前被自动保存的所有cookie。对cookie的操作感兴趣的请移步iOS中http请求使用cookie这篇文章。<br>以上就是我们日常开发中比较经常遇到的请求头，其实还有其他的field，但篇幅所限无法一一列出，想了解所有请求头请看这里请求头响应头列表。那在iOS中如何设置添加这些field呢？可以使用-[NSMutableURLRequest addValue: forHTTPHeaderField:]方法，获取当前请求已经设置的field可以用-[NSURLRequest allHTTPHeaderFields]。也就是我们可以通过以上接口定制我们所需要的请求头，但是有些field是不能改的，我们看一下iOS的描述：<br> 图2.4 iOS请求头接口描述.png<br>从文档中我们可以看到，在iOS中不应当对Authorization Connection Host WWW-Authenticate这几个header field做更改。<br>3、请求体<br>真正需要发给服务端的数据，在使用POST-multipart上传请求中请求体就是上传文件的二进制NSData类型数据；在GET请求中请求体为空；在普通的POST请求中请求体就是一些表单数据。在iOS中一般用NSURLRequest与NSMutableURLRequest的HTTPBody属性表示，添加body用-[NSMutableURLRequest setHTTPBody:]。<br>4、响应状态行<br>状态行是服务端返回给客户端的状态信息，包含HTTP版本号、状态码、状态码对应的英文名称。<br>以下就是典型的正确状态行：<br>1    HTTP/1.1 200 OK<br>这个部分需要讲的是错误码。事实上HTTP请求错误码可以根据错误码从左往右第一个数字大致分为以下几类：<br>1XX：信息提示。不代表成功或者失败，表示临时响应，比如100表示继续，101表示切换协议<br>2XX: 成功<br>3XX: 重定向<br>4XX:客户端错误，很有可能是客户端发生问题，如亲切可爱的404表示未找到文件，说明你的URI是有问题的，服务器机子上该目录是没有该文件的；414URI太长<br>5XX: 服务器错误，比如504网关超时<br>错误码是不用去记的，出错了再查对应的错误码含义就行。但是知道上面的分类有助于第一时间做出大体的判断，起码你能清楚是服务端还是客户端的原因。<br>5、响应头与响应实体<br>这部分与请求部分差异不大，响应头的字field会有稍许不同，响应头中的header field同样移步请求头响应头列表。</p>
+<p>3）    Http版本简介<br>HTTP 1.1之前<br>•    不支持持久连接。一旦服务器对客户端发出响应就立即断开TCP连接<br>•    无请求头跟响应头<br>•    客户端的前后请求是同步的。下一个请求必须等上一个请求从服务端拿到响应后才能发出，有点类似多线程的同步机制。<br>HTTP 1.1(主流版本)<br>与1.1之前的版本相比，做了以下性能上的提升<br>•    增加请求头跟响应头<br>•    支持持久连接。客户端通过请求头中指定Connection为keep-alive告知服务端不要在完成响应后立即释放连接。HTTP是基于TCP的，在HTTP 1.1中一次TCP连接可以处理多次HTTP请求<br>•    客户端不同请求之间是异步的。下一个请求不必等到上一个请求回来后再发出，而可以连续发出请求，有点类似多线程的异步处理。<br>HTTP 2.0<br>本着向下兼容的原则，1.1版本有的特性2.0都具备，也使用相同的API。但是2.0将只用于https网址。由于2.0的普及还需要比较长的一段时间，这里不展开，更多新特性请参考这篇文章。<br>我们重点关注一下当前1.1版本所做几点改变。支持持久连接有什么好处呢？HTTP是基于TCP连接的，如果连接被频繁地启动然后断开就会花费很多资源在TCP三次握手以及四次挥手上，效率低下。以请求一个网页为例，我们知道，一个html网页上的图片资源并不是直接嵌入在网页上，而只是提供url，图片仍需要额外发HTTP 请求去下载。一个网页从请求到最终加载到本地往往需要经过过个HTTP请求。在1.1版本之前请求一个网页就需要发生多次”握手-挥手”的过程，每次连接之间相互独立；而1.1及之后的版本最少只需要一次就够。<br>再来就是请求异步，其好处参考多线程异步处理，在此不展开。</p>
+<h2 id="Http与TCP、Scoket的区别"><a href="#Http与TCP、Scoket的区别" class="headerlink" title="Http与TCP、Scoket的区别"></a>Http与TCP、Scoket的区别</h2><p>HTTP是应用层的协议，更靠近用户端；TCP是传输层的协议；而socket是从传输层上抽象出来的一个抽象层，本质是接口。所以本质上三种还是很好区分的。尽管如此，有时候你可能会懵逼，HTTP连接、TCP连接、socket连接有什么区别？好吧，如果上面的图解释的还是不够清楚的话，我们继续往下看。<br>1、TCP连接与HTTP连接的区别<br>上文提过，HTTP是基于TCP的，客户端往服务端发送一个HTTP请求时第一步就是要建立与服务端的TCP连接，也就是先三次握手，“你好，你好，你好”。从HTTP 1.1开始支持持久连接，也就是一次TCP连接可以发送多次的HTTP请求。<br>小总结：HTTP基于TCP<br>2、TCP连接与Socket连接的区别<br>在图4.1中我们提到，socket层只是在TCP/UDP传输层上做的一个抽象接口层，因此一个socket连接可以基于连接，也有可能基于UDP。基于TCP协议的socket连接同样需要通过三次握手建立连接，是可靠的；基于UDP协议的socket连接不需要建立连接的过程，不过对方能不能收到都会发送过去，是不可靠的，大多数的即时通讯IM都是后者。<br>小总结：Socket也基于TCP<br>3、HTTP连接与Socket连接的区别<br>区分这两个概念是比较有意义的，毕竟TCP看不见摸不着，HTTP与Socket是实实在在能用到的。<br>•    HTTP是短连接，Socket(基于TCP协议的)是长连接。尽管HTTP1.1开始支持持久连接，但仍无法保证始终连接。而Socket连接一旦建立TCP三次握手，除非一方主动断开，否则连接状态一直保持。<br>•    HTTP连接服务端无法主动发消息，Socket连接双方请求的发送先后限制。这点就比较重要了，因为它将决定二者分别适合应用在什么场景下。HTTP采用“请求-响应”机制，在客户端还没发送消息给服务端前，服务端无法推送消息给客户端。必须满足客户端发送消息在前，服务端回复在后。Socket连接双方类似peer2peer的关系，一方随时可以向另一方喊话。<br>4、问题来了：什么时候该用HTTP，什么时候该用socket<br>这个问题的提出是很自然而然的。当你接到一个与另一方的网络通讯需求，自然会考虑用HTTP还是用Socket。<br>•    用HTTP的情况：双方不需要时刻保持连接在线，比如客户端资源的获取、文件上传等。<br>•    用Socket的情况：大部分即时通讯应用(QQ、微信)、聊天室、苹果APNs等<br>在iOS中，发HTTP请求一般用原生的NSURLConnection、NSURLSession或者开源的AFNetWorking(推荐)、ASIHttpRequest(已停止更新)。连接Socket连接我用的比较多是robbiehanson大神的CocoaAsyncSocket (XMPPFramework也是出自他手)。</p>
+<p>Socket又称”套接字”，应用程序通常通过”套接字”向网络发出请求或者应答网络请求。<br>以J2SDK-1.3为例，Socket和ServerSocket类库位于java.net包中。ServerSocket用于服务器端，Socket是建立网络连接时使用的。在连接成功时，应用程序两端都会产生一个Socket实例，操作这个实例，完成所需的会话。对于一个网络连接来说，套接字是平等的，并没有差别，不因为在服务器端或在客户端而产生不同级别。不管是Socket还是ServerSocket它们的工作都是通过SocketImpl类及其子类完成的。<br>socket现象解释</p>
+<p>Socket非常类似于电话插座。以一个国家级电话网为例，电话的通话双方相当于相互通信的2个进程，区号是它的网络地址；区内一个单位的交换机相当于一台主机，主机分配给每个用户的局内号码相当于Socket号。任何用户在通话之前，首先要占有一部电话机，相当于申请一个Socket；同时要知道对方的号码，相当于对方有一个固定的Socket。然后向对方拨号呼叫，相当于发出连接请求（假如对方不在同一区内，还要拨对方区号，相当于给出网络地址）。假如对方在场并空闲（相当于通信的另一主机开机且可以接受连接请求），拿起电话话筒，双方就可以正式通话，相当于连接成功。双方通话的过程，是一方向电话机发出信号和对方从电话机接收信号的过程，相当于向Socket发送数据和从socket接收数据。通话结束后，一方挂起电话机相当于关闭Socket，撤消连接。<br>在电话系统中，一般用户只能感受到本地电话机和对方电话号码的存在，建立通话的过程，话音传输的过程以及整个电话系统的技术细节对他都是透明的，这也与Socket机制非常相似。Socket利用网间网通信设施实现进程通信，但它对通信设施的细节毫不关心，只要通信设施能提供足够的通信能力，它就满足了。<br>至此，我们对Socket进行了直观的描述。抽象出来，Socket实质上提供了进程通信的端点。进程通信之前，双方首先必须各自创建一个端点，否则是没有办法建立联系并相互通信的。正如打电话之前，双方必须各自拥有一台电话机一样。<br>在网间网内部，每一个Socket用一个半相关描述：（协议，本地地址，本地端口）。<br>一个完整的Socket有一个本地唯一的Socket号，由操作系统分配。<br>最重要的是，Socket是面向客户/服务器模型而设计的，针对客户和服务器程序提供不同的Socket系统调用。客户随机申请一个Socket（相当于一个想打电话的人可以在任何一台入网电话上拨号呼叫），系统为之分配一个Socket号；服务器拥有全局公认的Socket，任何客户都可以向它发出连接请求和信息请求（相当于一个被呼叫的电话拥有一个呼叫方知道的电话号码）。<br>Socket利用客户/服务器模式巧妙地解决了进程之间建立通信连接的问题。服务器Socket半相关为全局所公认非常重要。读者不妨考虑一下，两个完全随机的用户进程之间如何建立通信？假如通信双方没有任何一方的Socket固定，就好比打电话的双方彼此不知道对方的电话号码，要通话是不可能的。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[iOS中的消息传递机制]]></title>
+      <url>http://yoursite.com/2015/10/22/1503iOS%E4%B8%AD%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/</url>
+      <content type="html"><![CDATA[<p>简要介绍iOS中几种常用的消息传递机制：KVO、Notification、delegation、block 以及Target-Action模式</p>
+<a id="more"></a>
+<h2 id="KVO"><a href="#KVO" class="headerlink" title="KVO"></a>KVO</h2><p>KVO提供了这样一种机制：当对象中的某个属性值发生了改变，可以对这些值的观察者做出通知。KVO的实现包含在Foundation里面，基于Foundation构建的许多Framework对KVO都有所依赖。要想了解更多关于如何使用KVO，可以阅读本期由Daniel写的的KVO和KVC文章。</p>
+<p>　　如果对某个对象中值的改变情况感兴趣，那么可以使用KVO消息传递机制。这里有两个要求，首先，接收者(会接收到值发生改变的消息)必须知道发送者(值将发生改变的那个对象)。另外，接收者同样还需要知道发送者的生命周期，因为在销毁发送者对象之前，需要取消观察者的注册。如果这两个要求都满足了，消息传递过程中可以是1对多(多个观察者可以注册某个对象中的值)。</p>
+<p>　　如果计划在Core Data对象上使用KVO，需要知道这跟一般的KVO使用方法有点不同。那就是必须结合Core Data的故障机制(faulting mechanism)，一旦core data出现了故障，它将会触发其属性对应的观察者(即使这些属性值没有发生改变)。</p>
+<h2 id="Notification"><a href="#Notification" class="headerlink" title="Notification"></a>Notification</h2><p>　　在不相关的两部分代码中要想进行消息传递，通知(notifacation)是非常好的一种机制，它可以对消息进行广播。特别是想要传递丰富的信息，并且不一定指望有谁对此消息关心。<br>　　通知可以用来发送任意的消息，甚至包含一个userInfo字典，或者是NSNotifacation的一个子类。通知的独特之处就在于发送者和接收者双方并不需要相互知道。这样就可以在非常松耦合的模块间进行消息的传递。记住，这种消息传递机制是单向的，作为接收者是不可以回复消息的。</p>
+<h2 id="delegation"><a href="#delegation" class="headerlink" title="delegation"></a>delegation</h2><p>在苹果的Framework中，delegation模式被广泛的只用着。delegation允许我们定制某个对象的行为，并且可以收到某些确定的事件。为了使用delegation模式，消息的发送者需要知道消息的接收者(delegate)，反过来就不用了。这里的发送者和接收者是比较松耦合的，因为发送者只知道它的delegate是遵循某个特定的协议。</p>
+<p>delegate协议可以定义任意的方法，因此你可以准确的定义出你所需要的类型。你可以用函数参数的形式来处理消息内容，delegate还可以通过返回值的形式给发送者做出回应。如果只需要在相对接近的两个模块之间进行消息传递，那么Delegation是一种非常灵活和直接方式。</p>
+<p>不过，过渡使用delegation也有一定的风险，如果两个对象的耦合程度比较紧密，相互之间不能独立存在，那么此时就没有必要使用delegate协议了，针对这种情况，对象之间可以知道相互间的类型，进而直接进行消息传递。例如UICollectionViewLayout和NSURLSessionConfiguration。</p>
+<h2 id="block"><a href="#block" class="headerlink" title="block"></a>block</h2><p>Block相对来说，是一种比较新的技术，它首次出现是在OS X 10.6和iOS 4中。一般情况下，block可以满足用delegation实现的消息传递机制。不过这两种机制都有各自的需求和优势。</p>
+<p>当不考虑使用block时，一般主要是考虑到block极易引起retain环。如果发送者需要reatain block，而又不能确保这个引用什么时候被nil，这样就会发生潜在的retain环。</p>
+<p>假设我们想要实现一个table view，使用block替代delegate，来当做selection的回调，如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.myTableView.selectionHandler = ^<span class="keyword">void</span>(<span class="built_in">NSIndexPath</span> *selectedIndexPath) &#123; </span><br><span class="line"><span class="comment">// handle selection ... </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码的问题在于self retain了table view，而table view为了之后能够使用block，进而 retain了block。而table view又不能把这个引用nil掉，因为它不知道什么时候不在需要这个block了。如果我们保证不了可以打破这个retain环，而我们又需要retain发送者，此时block不是好的选择。</p>
+<p>NSOperation就可以很好的使用block，因为它能再某个时机打破retain环：</p>
+<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">01</span>.self.queue = [[NSOperationQueue <span class="keyword">alloc</span>] init]<span class="comment">; </span></span><br><span class="line"><span class="number">02</span>.MyOperation *operation = [[MyOperation <span class="keyword">alloc</span>] init]<span class="comment">; </span></span><br><span class="line"><span class="number">03</span>.operation.completionBlock = ^&#123; </span><br><span class="line"><span class="number">04</span>.    [self finishedOperation]<span class="comment">; </span></span><br><span class="line"><span class="number">05</span>.&#125;<span class="comment">; </span></span><br><span class="line"><span class="number">06</span>.[self.queue addOperation:operation]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>乍一看这似乎是一个retain环：self retain了queue，queue retain了operation，而operation retain了completion block，而completion blockretain了self。不过，在这里，将operation添加到queue时，会使operation在某个时机被执行，然后从queue中remove掉（如果没有被执行，就会有大问题了）。一单queue移除了operation之后，retain环就被打破了。</p>
+<p>再来一个示例：这里实现了一个视频编码器的类，里面有一个名为encodeWithCompletionHandler:的方法。为了避免出现retain环，我们需要确保编码器这个对象能够在某个时机nil掉其对block的引用。其内部代码如下所示：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">01.</span><span class="class"><span class="keyword">@interface</span> <span class="title">Encoder</span> () </span></span><br><span class="line"><span class="number">02.</span><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="keyword">void</span> (^completionHandler)(); </span><br><span class="line"><span class="number">03.</span><span class="keyword">@end</span> </span><br><span class="line"><span class="number">04.</span> </span><br><span class="line"><span class="number">05.</span><span class="class"><span class="keyword">@implementation</span> <span class="title">Encoder</span> </span></span><br><span class="line"><span class="number">06.</span> </span><br><span class="line"><span class="number">07.</span>- (<span class="keyword">void</span>)encodeWithCompletionHandler:(<span class="keyword">void</span> (^)())handler </span><br><span class="line"><span class="number">08.</span>&#123; </span><br><span class="line"><span class="number">09.</span>    <span class="keyword">self</span>.completionHandler = handler; </span><br><span class="line"><span class="number">10.</span>    <span class="comment">// do the asynchronous processing... </span></span><br><span class="line"><span class="number">11.</span>&#125; </span><br><span class="line"><span class="number">12.</span> </span><br><span class="line"><span class="number">13.</span><span class="comment">// This one will be called once the job is done </span></span><br><span class="line"><span class="number">14.</span>- (<span class="keyword">void</span>)finishedEncoding </span><br><span class="line"><span class="number">15.</span>&#123; </span><br><span class="line"><span class="number">16.</span>    <span class="keyword">self</span>.completionHandler(); </span><br><span class="line"><span class="number">17.</span>    <span class="keyword">self</span>.completionHandler = <span class="literal">nil</span>; <span class="comment">// &lt;- Don't forget this! </span></span><br><span class="line"><span class="number">18.</span>&#125; </span><br><span class="line"><span class="number">19.</span> </span><br><span class="line"><span class="number">20.</span><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>在上面的代码中，一旦编码任务完成，就会调用complietion block，进而把引用nil掉。</p>
+<p>如果我们发送的消息属于一次性的(具体到某个方法的调用)，由于这样可以打破潜在的retain环，那么使用block是非常不错的选择。另外，如果为了让代码可读性更强，更有连贯性，那最好是使用block了。根据这个思路，block经常可以用于completion handler、error handler等。</p>
+<h2 id="Target-Action"><a href="#Target-Action" class="headerlink" title="Target-Action"></a>Target-Action</h2><p>Target-Action主要被用于响应用户界面事件时所需要传递的消息中。iOS中的UIControl和Mac中的NSControl/NSCell都支持这种机制。Target-Action在消息的发送者和接收者之间建立了一个非常松散耦合。消息的接收者不知道发送者，甚至消息的发送者不需要预先知道消息的接收者。如果target是nil，action会在响应链(responder chain)中被传递，知道找到某个能够响应该aciton的对象。在iOS中，每个控件都能关联多个target-action。</p>
+<p>基于target-action消息传递的机制有一个局限就是发送的消息不能携带自定义的payload。在Mac的action方法中，接收者总是被放在第一个参数中。而在iOS中，可以选择性的将发送者和和触发action的事件作为参数。除此之外，没有别的办法可以对发送action消息内容做控制。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Markdown语法 与 Hexo常用指令]]></title>
+      <url>http://yoursite.com/2015/05/05/1402HexoAndMarkdown/</url>
+      <content type="html"><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown</a>是一种超轻量级的<code>标记语言</code>，常用的标记符号不超过十个，相对于更为复杂的<code>HTML标记语言</code>来讲，<code>Markdown</code>实在简便多了，因此学习成本也不是很大。</p>
+<a id="more"></a>
+<p>更多关于Markdown的认识，我们可以参考：<a href="http://sspai.com/25137/" target="_blank" rel="external">认识与入门 Markdown</a></p>
+<h2 id="Markdown工具"><a href="#Markdown工具" class="headerlink" title="Markdown工具"></a>Markdown工具</h2><p>关于支持<strong>Markdown的书写工具</strong>网络上有很多推荐，这里不再一一列举，常用的有：</p>
+<p><strong><a href="http://mouapp.com/" target="_blank" rel="external">Mou</a></strong>：外文世界对 MarkDown 的热衷在 Mac 上可见一斑，目前虽是免费的，但功能性却能比肩同类的收费软件。</p>
+<p><strong><a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text 3</a></strong>：支持 OS X、Windows、Ubuntu 等 UNIX 及 Linux 操作系统，在代码工作者圈内相当出名。</p>
+<p><strong><a href="http://www.markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a></strong>：推荐较多，但是免费版的有些扩展功能受限。</p>
+<p><strong><a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a></strong>：有<strong><a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="external">网页版</a></strong>和<strong><a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">客户端</a></strong>: 支持实时同步预览，编辑器同步滚动，多种系统内置的主题等特点。</p>
+<p><strong><a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a></strong>：是一家由国内初创团队建立的在线文字创作及发布平台。</p>
+<p><strong><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a></strong>：Windows/Mac/Linux 全平台客户端。</p>
+<h2 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h2><h3 id="常见格式及其对应的语法："><a href="#常见格式及其对应的语法：" class="headerlink" title="常见格式及其对应的语法："></a>常见格式及其对应的语法：</h3><p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2FMark.png" alt="Markdown"></p>
+<p><strong>注释与示例:</strong></p>
+<h3 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h3><p>在字体两侧分别加两个星号 ** ， 当然，也能使用快捷键 Ctrl + B 快速加粗；</p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>将需要设置为斜体的文字两端使用一个 * （或者 _ ） 夹起来，快捷键 Ctrl + I ；</p>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>在需要设置删除线的文字两侧加两个波浪线 ~~ 夹起来，可以表示<del>删除文字</del>；</p>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>分割线的语法只需要三个星号<code>*</code>或者三个小短线 <code>-</code> 号，例如：</p>
+<hr>
+<hr>
+<h3 id="外链接"><a href="#外链接" class="headerlink" title="外链接"></a>外链接</h3><p>[描述](链接地址) 为文字添加外链接，可以使用快捷键 Ctrl + L 快速设置；<br>示例： <code>[HarbingWang的博客](http://harbingwang.github.io)</code><br>显示： 这里是<a href="http://harbingwang.github.io" target="_blank" rel="external">HarbingWang的博客</a> 链接。</p>
+<h3 id="内嵌代码"><a href="#内嵌代码" class="headerlink" title="内嵌代码"></a>内嵌代码</h3><p>第一种:引入单行代码出现一个代码框，需要使用键盘左上角的ESC键下面的反单引号夹在文字两侧，两侧各一个就行。</p>
+<p>例如：\<code>Hellow world！</code></p>
+<p>显示：</p>
+<p><code>Hellow world！</code></p>
+<p>第二种：多行代码的引入需要在代码段的前后分别使用三个反单引号</p>
+<p>显示：<br><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span><span class="comment">; i &lt; 100; i++)</span></span><br><span class="line">&#123;</span><br><span class="line">      printf(<span class="string">"hello markdown!\n"</span>)<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="引入内容"><a href="#引入内容" class="headerlink" title="引入内容"></a>引入内容</h3><p>第一种:通过在文字开头添加“&gt;”表示块注释，快捷键使用 Ctrl + Q 例如；</p>
+<blockquote>
+<p>如果你无法简洁的表达你的想法，那只说明你还不够了解它。 – 阿尔伯特·爱因斯坦</p>
+</blockquote>
+<p>第二种: 使用<code>tab键</code>或者<code>四个空格</code></p>
+<pre><code>一个项目两部电脑三餐盒饭只为四千工资搞得五脏俱损六神无主仍然七点起床八点开会处理九个漏洞十分辛苦 
+十年编码九年加班八面无光忙的七窍生烟到头六亲不认五体投地依旧四肢酸软三更加班只为二个臭钱一生孤苦
+</code></pre><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>插入图片的语法与插入链接很像，区别在一个插入图片的时候需要加一个<code>!</code>号</p>
+<p>Markdown语法： ![描述](图片链接地址)</p>
+<p>示例：</p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Funtitled.png" alt="Github"></p>
+<ul>
+<li>插入图片的地址需要图床生成图片外链，这里推荐使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛图床</a>，生成URL地址即可。</li>
+<li>不同Markdown工具下插入图片的方式也有所不同，这里只说明通用做法，具体可参考编辑器的使用说明；</li>
+</ul>
+<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><p>标题是每篇文章中最常用的格式，在Markdown语法中，如果某行文字被定义为标题，只需要在行首加上<code>#</code>符号即可：</p>
+<pre><code>H1 : # Header 1
+H2 : ## Header 2
+H3 : ### Header 3
+H4 : #### Header 4
+H5 : ##### Header 5
+H6 : ###### Header 6
+</code></pre><ul>
+<li>是几级标题就用几个 # 符号，每增加一个 # 表示更深入一个层次的内容，总共有六级标题。</li>
+<li>标准的Markdown语法需要在符号后面多加一个空格，建议加上。</li>
+</ul>
+<p>上面这种设置标题的方式是最为直观的，当然在Markdown语法下，我们也可以通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题，例如:</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">我是一级标题</span><br><span class="line">====</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">我是二级标题</span><br><span class="line">----</span></span><br></pre></td></tr></table></figure>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用一个 <code>*</code>，<code>+</code>或<code>-</code> 表示无序列表。</p>
+<p>示例：</p>
+<ul>
+<li>无序列表项 一</li>
+<li>无序列表项 二</li>
+<li>无序列表项 三</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用数字和英文句点表示有序列表, 不要求数字一定要连续。</p>
+<p>示例：</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<h3 id="绘制表格"><a href="#绘制表格" class="headerlink" title="绘制表格"></a>绘制表格</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Tables        </span>|<span class="string"> Are           </span>|<span class="string"> Cool  </span>|</span><br><span class="line">|<span class="string"> ------------- </span>|<span class="string">:-------------:</span>|<span class="string"> -----:</span>|</span><br><span class="line">|<span class="string"> col 3 is      </span>|<span class="string"> right-aligned </span>|<span class="string"> $1600 </span>|</span><br><span class="line">|<span class="string"> col 2 is      </span>|<span class="string"> centered      </span>|<span class="string">   $12 </span>|</span><br><span class="line">|<span class="string"> zebra stripes </span>|<span class="string"> are neat      </span>|<span class="string">    $1 </span>|</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h3><p>Markdown 支持在以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<pre><code>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+</code></pre><p><strong> 以上的Markdown语法基本上足够我们书写一篇博客了，关于Markdown的高级用法，包括通过Markdown创建公式，绘制流程图等请参考本文底部的 Reference相关；</strong></p>
+<hr>
+<h2 id="Hexo常用指令"><a href="#Hexo常用指令" class="headerlink" title="Hexo常用指令"></a>Hexo常用指令</h2><p>以下关于Hexo常用指令的整理，要想熟练使用一个工具，首先就要熟练掌握他的相关指令，以便操控这一工具。下面将着重介绍几条常用的 Hexo 指令：</p>
+<h3 id="1、新建文章"><a href="#1、新建文章" class="headerlink" title="1、新建文章"></a>1、新建文章</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> articleName</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>　<strong>Note：</strong></p>
+<ul>
+<li>新建一篇题为“articleName”的文章，此时会在E/Hexo/source/_posts/目录下生成一份articleName.md 的文件，使用Notepad++、小书匠、MarkdownPad2等编辑工具打开即能书写；</li>
+<li>提示信息：INFO  Created: E:\Hexo\source_posts\articleName.md </li>
+<li>如果标题包含空格，需要使用双引号括起来</li>
+</ul>
+</blockquote>
+<h3 id="2、新建页面"><a href="#2、新建页面" class="headerlink" title="2、新建页面"></a>2、新建页面</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page pageName</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>　<strong>Note：</strong></p>
+<ul>
+<li>新建一个题为“pageName”的页面，此时会在E:\Hexo\source\目录下生成一个名为pageName的文件夹，其中包含一份 index 的md文件；</li>
+<li>提示信息：INFO  Created: E:\Hexo\source\pageName\index.md</li>
+<li>同样地，如果语句中包含空格，需要使用双引号括起来</li>
+</ul>
+</blockquote>
+<h3 id="3、生成静态页面"><a href="#3、生成静态页面" class="headerlink" title="3、生成静态页面"></a>3、生成静态页面</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">ge</span><span class="symbol">nerate</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>启动该条指令后会将当前网页的内容生成静态页面到public目录下</li>
+<li>提示信息：<br>  INFO  Start processing<br>  INFO  Files loaded in 595 ms<br>  INFO  0 files generated in 612 ms</li>
+</ul>
+</blockquote>
+<h3 id="4、开启本地服务器端口"><a href="#4、开启本地服务器端口" class="headerlink" title="4、开启本地服务器端口"></a>4、开启本地服务器端口</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>开启预览访问的端口，默认端口为4000</li>
+<li>关闭server使用 ctrl + c  </li>
+<li>提示信息：<br>  INFO  Start processing<br>  INFO  Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.</li>
+<li>在使用hexo server 可能会遇到端口被占用的情况，不妨使用以下指令来更改端口</li>
+</ul>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -<span class="selector-tag">p</span> <span class="number">4001</span></span><br></pre></td></tr></table></figure>
+<h3 id="5、部署到Github"><a href="#5、部署到Github" class="headerlink" title="5、部署到Github"></a>5、部署到Github</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> deploy</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>将 E/Hexo/目录下的 .deploy_git 文件夹部署到Github</li>
+<li>部署前需要预先 hexo generate 生成静态文件</li>
+<li>关闭server使用 ctrl + c  </li>
+<li>提示信息：<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>…..部署的文件<br>To git@github.com:HarbingWang/harbingwang.github.io.git<br> da818a3..e4e53c6  HEAD -&gt; master<br>INFO  Deploy done: git  # 当看到 “INFO  Deploy done: git”时即表示部署已经完成；</li>
+</ul>
+</blockquote>
+<h3 id="6、清除文件"><a href="#6、清除文件" class="headerlink" title="6、清除文件"></a>6、清除文件</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>清除E/Hexo目录下的缓存文件（db.json）和已经生成的静态文件（public）文件</li>
+<li>网页正常情况下可以忽略此条命令</li>
+</ul>
+</blockquote>
+<h3 id="7、查看Hexo版本"><a href="#7、查看Hexo版本" class="headerlink" title="7、查看Hexo版本"></a>7、查看Hexo版本</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>查看当前使用的Hexo的版本号</li>
+<li>提示信息：<br>hexo: 3.2.0<br>hexo-cli: 1.0.1<br>os: Windows_NT 6.1.7601 win32 x64<br>http_parser: 2.6.2<br>node: 5.10.0<br>v8: 4.6.85.31<br>uv: 1.8.0<br>zlib: 1.2.8<br>ares: 1.10.1-DEV<br>icu: 56.1<br>modules: 47<br>openssl: 1.0.2g</li>
+</ul>
+</blockquote>
+<h2 id="复合指令"><a href="#复合指令" class="headerlink" title="复合指令"></a>复合指令</h2><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -<span class="keyword">d</span>   </span><br><span class="line">hexo <span class="keyword">s</span> -<span class="keyword">d</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note：</strong></p>
+<ul>
+<li>hexo g -d  # 等价于 hexo generate –deploy ：生成静态文件并部署</li>
+<li>hexo s -d  # 等价于 hexo deploy –generate ：开启预览并部署到Github</li>
+</ul>
+</blockquote>
+<h2 id="简写形式"><a href="#简写形式" class="headerlink" title="简写形式"></a>简写形式</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> n <span class="comment">#等价于 hexo new</span></span><br><span class="line">hexo g <span class="comment">#等价于 hexo generate</span></span><br><span class="line">hexo s <span class="comment">#等价于 hexo server</span></span><br><span class="line">hexo d <span class="comment">#等价于 hexo deploy</span></span><br><span class="line">hexo v <span class="comment">#等价于 hexo version</span></span><br></pre></td></tr></table></figure>
+<h2 id="如何卸载Hexo？"><a href="#如何卸载Hexo？" class="headerlink" title="如何卸载Hexo？"></a>如何卸载Hexo？</h2><blockquote>
+<p>3.0.0版本执行npm uninstall hexo-cli -g，之前版本执行npm uninstall hexo -g</p>
+</blockquote>
+<p>##　如何安装旧版本Hexo？</p>
+<blockquote>
+<p>　先卸载当前版本，以2.8.3为例，执行npm install hexo@2.8.3 -g，再初始化并安装依赖和插件。</p>
+</blockquote>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>整理过程中难免有所疏漏，失误之处还请指正，更多详细内容请参考：</p>
+<ul>
+<li><a href="http://sspai.com/25137/" target="_blank" rel="external">认识与入门 Markdown</a></li>
+<li><a href="http://sspai.com/27792" target="_blank" rel="external">解决作者们的焦虑：7 款优秀 Markdown 编辑工具推荐</a></li>
+<li><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></li>
+<li><a href="http://www.wikimilk.org/markdown-guide/" target="_blank" rel="external">Markdown：指南</a></li>
+<li><a href="https://segmentfault.com/a/1190000002632530?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">hexo常用命令笔记</a>   【<strong>推荐</strong>】</li>
+<li><a href="http://wiki.jikexueyuan.com/project/hexo-document/commands.html" target="_blank" rel="external">极客学院Hexo中文版指令</a>   【<strong>推荐</strong>】</li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git使用手册]]></title>
+      <url>http://yoursite.com/2015/01/11/1502TheUsageOfGitBash/</url>
+      <content type="html"><![CDATA[<p><a href="http://ninghao.net/blog/1379" target="_blank" rel="external">Git 入门手册</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.jeffjade.com/2014/12/22/2014-12-22-gitmemo/" target="_blank" rel="external">Git常用命令备忘</a><br><a href="https://blog.6ag.cn/978.html" target="_blank" rel="external">常用Git命令合集</a></p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2F%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85.jpg" alt="1"><br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FIP%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.jpg" alt="1"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo搭建静态博客]]></title>
+      <url>http://yoursite.com/2014/10/01/1501HexoWithGithub/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="HarbingWang/harbingwang.github.io"></div>
+
+<p><strong>Hexo</strong> 是一个基于<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>技术开发的纯静态博客系统，英文谐音“黑客”，听起来就很炫酷。Hexo具有简介、高效的特点，它能在几秒内将几百个文件快速生成静态网页，并且支持<a href="http://baike.baidu.com/link?url=4XofL-iZHmVBC1ItR0WE8qHCiFyINe-MdwBXFFCvk_3rdUXu9-Bgw7R8LG3wlxt8KX5vpraWJc34QLjJUtuHga" target="_blank" rel="external">Markdown</a>语法，因此近年来越来越多的程序员和博主们开始青睐于使用Hexo搭建个人博客。与<a href="https://cn.wordpress.org/" target="_blank" rel="external">Wordpress</a>相似，我们可以使用Hexo创建自己的博客，并且托管在<a href="https://pages.github.com/" target="_blank" rel="external">GitHubPages</a>等平台上面，当然也能绑定自己的域名，打造专属自己的网站。</p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Fhexo%2Bgithub.png" alt="Hexo + Github"></p>
+<p>在我搭建博客初期一直有一个困惑，到底需不需要预先购买独立域名呢？答案是否定的！建设初期完全不需要预先购买域名，如果后期需要再购买也不迟。现在普遍流行的搭建方案是使用Hexo将我们写好的文件生成静态网页（关于如何生成，不必为此烦恼，在后面的环节中，只需要一句代码即可完成生成），随后，我们可以通过本地服务器预览我们的搭建效果；进行到这里，由于只是生成静态网页保存在本地，并不能通过链接进行访问，此时我们我们就需要一个更加强大的工具 —— <code>GithubPages</code>,来帮助我们部署博客，这些在文章后面都会有所有所涉及；关于使用Hexo搭建静态博客并部署到的教程，网络上有很多现成的教程，按部就班一般都能完成搭建。介于不同操作系统下部分步骤已有所不同，因此本文<code>Win7</code>环境下的搭建流程。整理过程中难免有所疏漏与失误，还请指正。</p>
+<p>以下我们将分三大步完成这次搭建：</p>
+<ol>
+<li>配置搭建环境</li>
+<li>安装Hexo</li>
+<li>配置和和使用 Github </li>
+</ol>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>工欲善其事必先利其器，在搭建之前，我们需要使用几个工具来配置下我们的搭建环境：</p>
+<h3 id="下载并安装-Node-js"><a href="#下载并安装-Node-js" class="headerlink" title="下载并安装 Node.js"></a>下载并安装 Node.js</h3><p>由于 Hexo 是基于 Node.js 的第三方模块，所以缺少 Node.js 不可。请自行前往<a href="http://nodejs.cn/" target="_blank" rel="external">Node.js官网</a>下载适合自己系统的版本进行安装，安装过程一路保持默认设置即可。</p>
+<h3 id="下载并安装-Git"><a href="#下载并安装-Git" class="headerlink" title="下载并安装　Git"></a>下载并安装　Git</h3><p>我们在搭建博客的过程中，可能会需要使用到一些关于Hexo的主题和插件，使用 <a href="https://git-scm.com/" target="_blank" rel="external">Git</a> 是最好的下载方式，前往<a href="https://www.git-scm.com/" target="_blank" rel="external">Git官网下载</a>下载对应的版本，安装Git，同样地，一路保持默认就行。</p>
+<p><strong>打开 Git 的两种方式：</strong></p>
+<ul>
+<li>开始 -&gt;　Git -&gt; Git Bash</li>
+<li>鼠标右键选择　Git Bash　，打开后是一个黑色的命令框，Git的相关操作都在这个界面使用命令行来完成；</li>
+</ul>
+<h3 id="安装-Notepad-或-Sublime-Text3"><a href="#安装-Notepad-或-Sublime-Text3" class="headerlink" title="安装 Notepad++  或  Sublime Text3"></a>安装 <a href="https://notepad-plus-plus.org/download/v6.9.1.html" target="_blank" rel="external">Notepad++</a>  或  <a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text3</a></h3><p>在此，Notepad++ 和 Sublime Text只是作为文本编辑器进行使用，他们支持多种编程语言和文件格式，同时也支持Markdown语法，是不可多得的练码奇才，笔者习惯使用Notepad++进行文本的编辑操作。</p>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>以上是对博客搭建环境的配置，下面开始我们正式的搭建步骤：</p>
+<h3 id="新建本地文件夹"><a href="#新建本地文件夹" class="headerlink" title="新建本地文件夹"></a>新建本地文件夹</h3><ul>
+<li>在电脑上选择一个盘，新建一个文件夹，并命名为 <code>Hexo</code> (我的是 E:\Hexo 一下叫做 目标目录)</li>
+</ul>
+<h3 id="打开-Git-Bash-Here"><a href="#打开-Git-Bash-Here" class="headerlink" title="打开 Git Bash Here"></a>打开 Git Bash Here</h3><ul>
+<li>双击 Hexo 文件夹进入，然后鼠标右键打开 <code>Git Bash Here</code>，出现一个黑色的命令框，今后的操作均在此进行；</li>
+</ul>
+<h3 id="安装-Hexo-1"><a href="#安装-Hexo-1" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ul>
+<li>安装过程可参考官方提供的 <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Github教程</a><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="安装依赖和插件"><a href="#安装依赖和插件" class="headerlink" title="安装依赖和插件"></a>安装依赖和插件</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>此时Git会从网络下载插件和依赖，并在E:\Hexo 目标目录中安装生成node_modules 文件；</li>
+<li>由于 Git 从网络下载Hexo的插件和依赖的过程是访问外网，因此下载速度可能会相对较慢，一般不会超过十分钟；；</li>
+</ul>
+<h3 id="初始化文件夹"><a href="#初始化文件夹" class="headerlink" title="初始化文件夹"></a>初始化文件夹</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hexo init 后会自动在目标文件夹 Hexo 下生成搭建网站所需要的所有静态文件；</li>
+<li>尤其值得注意的是，初始化 init 操作一定要在 目标目录 下进行，否则会出错；</li>
+</ul>
+<h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>提示信息：</p>
+<p>  INFO  Start processing<br>  INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.</p>
+</li>
+</ul>
+<ul>
+<li>默认端口为： 4000 ，在此过程中，如果遇到端口被占用的情况，不妨试试打开 4001 或者其他端口进行预览；</li>
+<li>使用 4001 端口进行预览</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -<span class="selector-tag">p</span> <span class="number">4001</span></span><br></pre></td></tr></table></figure>
+<h3 id="浏览器预览效果"><a href="#浏览器预览效果" class="headerlink" title="浏览器预览效果"></a>浏览器预览效果</h3><ul>
+<li>在浏览器中打开  <strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>  ，如果看到Hexo的原始页面【如下图所示】，则表示<strong>本地</strong>静态博客搭建完成；</li>
+<li>正常情况下应该是最原始的Hexo画面，但如果看到的浏览器页面是一块白板和<code>Cannot GET /</code>几个字时。其原因在于 <strong>Hexo2.6</strong> 以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-renderer-ejs <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-renderer-stylus <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-renderer-marked <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这个时候再 hexo generate 重新生成静态文件，并启动本地服务器：hexo server，点击网址 <a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a> 就能预览到我们想要的画面了；</p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F201604%2FImage2.png" alt="Hexo"></p>
+<h3 id="Hexo相关指令请参考：Markdown语法-与-Hexo常用指令"><a href="#Hexo相关指令请参考：Markdown语法-与-Hexo常用指令" class="headerlink" title="Hexo相关指令请参考：Markdown语法 与 Hexo常用指令"></a>Hexo相关指令请参考：<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdown语法 与 Hexo常用指令</a></h3><h2 id="配置和使用Github"><a href="#配置和使用Github" class="headerlink" title="配置和使用Github"></a>配置和使用Github</h2><p>以上操作我们只是简单地将文件生成本地静态文件保存在本地进行预览，要想让别人通过链接访问我们写的文章，那么需要借助于Github将这些数据托管到一个大仓库中。或许这里有小伙伴会有疑问，我们供别人访问的网址怎么来，需要购买域名了吗？答案还是NO！</p>
+<p>Github为我们提供了极大地便利，我们可以使用他提供的Pages服务。GitHub Pages 默认为每个注册用户分配了一个二级域名 your_user_name.github.com 或 your_user_name.github.io  如果你对上述域名不满意，可以自己去申请一个自己的域名，然后绑定到GitHub Pages。<br>绑定方法很简单，在repo根目录下建立一个CNAME文件，里面写上域名即可。</p>
+<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><p>前往<a href="https://github.com/" target="_blank" rel="external">Github官网</a>注册账号，点击 Sign in 输入用户名（全英文纯小写）、邮箱和密码进行注册，邮箱尤其重要，一定要牢记。</p>
+<h3 id="创建仓库-Repository"><a href="#创建仓库-Repository" class="headerlink" title="创建仓库 Repository"></a>创建仓库 Repository</h3><p>注册登录Github主页后，点击 <code>New repository</code> 绿色按钮进行创建，在为仓库命名时需要注意的是他的命名规则。在前面我们讲到，<code>GitHub Pages</code> 默认为每个注册用户分配了一个二级域名，形如： <code>harbingwang.github.com</code> 和 <code>harbingwang.github.io</code>，分别对应GithubPages的两种类型，<code>Project Pages</code> 和 <code>User Pages</code> ，区别在于：</p>
+<ul>
+<li>UserPages 访问的地址是二级域名 <code>http://username.github.io</code>，部署静态博客的时候需要部署到 <code>master</code> 分支。 创建项目名称为： <code>username.github.io</code> ，将 <code>username</code> 改为你注册时的用户名，一定要保持一致，个人博客推荐使用这种方式；</li>
+<li>Project Pages 访问的地址是 <code>http://username.github.io/projectname</code>，需要部署到<code>gh-pages</code>分支。创建项目名称可以随意。</li>
+</ul>
+<h3 id="设置-Git"><a href="#设置-Git" class="headerlink" title="设置 Git"></a>设置 Git</h3><ul>
+<li>开始 -&gt;　Git -&gt; Git Bash，执行下面的命令：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="selector-class">.email</span> <span class="string">"注册时的邮箱地址"</span></span><br><span class="line">git config --global user<span class="selector-class">.name</span> <span class="string">"注册时的账户名"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="检查-SSH-keys"><a href="#检查-SSH-keys" class="headerlink" title="检查 SSH keys"></a>检查 SSH keys</h3><p>所谓 SSH keys 就是用来将本地的 Git 项目与Github 账号联系起来；<br>首先我们要检查自己电脑上是否有现有的 SSH keys</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh	<span class="comment"># 检查本机的ssh密钥</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果显示“No such file or directory”，说明我们是第一次使用Git，直接使用生成新的 SSH keys 邪的指令；</li>
+<li>否则可以使用下面的方法备份和移除原有的 SSH keys ;</li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ls</span><br><span class="line">config  id_rsa  id_rsa.pub  known_hosts</span><br><span class="line"><span class="variable">$ </span>mkdir key_backup</span><br><span class="line"><span class="variable">$ </span>cp id_rsa* key_backup</span><br><span class="line"><span class="variable">$ </span>rm id_rsa*</span><br></pre></td></tr></table></figure>
+<h3 id="生成新的-SSH-keys"><a href="#生成新的-SSH-keys" class="headerlink" title="生成新的 SSH keys"></a>生成新的 SSH keys</h3><p>输入下面的命令就能生成新的key文件，当Git提示我们需要输入文件名时，回车就行；<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -<span class="keyword">C</span> <span class="string">"注册时的邮箱地址"</span></span><br></pre></td></tr></table></figure></p>
+<p>执行过程中会显示以下内容：<br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F201604%2FQQ%E6%88%AA%E5%9B%BE20160411212342.png" alt="SSH Keys"></p>
+<h3 id="添加-SSH-Key-到-GitHub"><a href="#添加-SSH-Key-到-GitHub" class="headerlink" title="添加 SSH Key 到 GitHub"></a>添加 SSH Key 到 GitHub</h3><ol>
+<li>通过查看钥匙保存的路径找到已经生成的<code>id_rsa.pub</code>文件，用 Notepad++ 等文档编辑器打开，拷贝这个文件里面的内容；</li>
+<li>登录<code>Github</code>-&gt; <code>Settings</code>—&gt; <code>SSH keys</code> —&gt; <code>Add SSH key</code>，在Title文本框中输入任意字符，在Key文本框粘贴刚才复制的公钥字符串，按保存按钮完成操作。[提示： 公钥字符串一般是以ssh-rsa开头的，文本框也会有提示]</li>
+</ol>
+<h3 id="验证-SSH-Key-是否成功加入到-GitHub"><a href="#验证-SSH-Key-是否成功加入到-GitHub" class="headerlink" title="验证 SSH Key 是否成功加入到 GitHub"></a>验证 SSH Key 是否成功加入到 GitHub</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github<span class="selector-class">.com</span>	</span><br><span class="line">#注意： git@github<span class="selector-class">.com</span> 不需要做替换，严格按照这样的形式操作就行；</span><br></pre></td></tr></table></figure>
+<p>如果出现下面的密钥指纹警告<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (<span class="literal">yes</span>/<span class="literal">no</span>)?</span><br></pre></td></tr></table></figure></p>
+<p>输入 <code>yes</code> 回车即可，如果添加成功你能看到这样的提示：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi HarbingWang! You've successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 _config.yml 文件</h3><blockquote>
+<p>　Hexo 3.0.0默认未安装hexo-deployer-git插件，如果你之前未安装，目标目录下执行以下命令安装<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>修改<code>E:Hexo/_config.yml</code>文件中的 <code>deploy</code>项，具体格式如下：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
+<h3 id="Git完成部署"><a href="#Git完成部署" class="headerlink" title="Git完成部署"></a>Git完成部署</h3><p>在目标目录（E:/Hexo）下鼠标右键 选择Git Bash Here</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g <span class="_">-d</span>	<span class="comment"># 生成静态文件并部署到 Github</span></span><br></pre></td></tr></table></figure>
+<h3 id="测试搭建效果"><a href="#测试搭建效果" class="headerlink" title="测试搭建效果"></a>测试搭建效果</h3><p>至此，个人静态博客的搭建与部署已经完成，在浏览器端打开　<code>http://username.github.io</code> 查看搭建效果，第一次使用可能会相对较慢，一般不会超过十分钟，请耐心等待。</p>
+<h2 id="出错参考"><a href="#出错参考" class="headerlink" title="出错参考"></a>出错参考</h2><ul>
+<li><a href="https://xuanwo.org/2014/08/14/hexo-usual-problem/" target="_blank" rel="external">Hexo常见问题解决方案</a></li>
+<li><a href="http://blog.csdn.net/wx_962464/article/details/44786929" target="_blank" rel="external">Hexo 使用中遇到的问题总结 </a></li>
+<li><a href="https://segmentfault.com/q/1010000003870970" target="_blank" rel="external">localhost:4000访问本地blog一直无响应</a></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://ninghao.net/blog/1379" target="_blank" rel="external">Git 入门手册</a></li>
+<li><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a></li>
+<li><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a> </li>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
+<li><a href="http://beiyuu.com/github-pages/" target="_blank" rel="external">使用Github Pages建独立博客</a></li>
+<li><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a></li>
+<li><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a></li>
+<li><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[个人博客搭建与优化]]></title>
+      <url>http://yoursite.com/2014/01/01/1401PersonalBlogProgressing/</url>
+      <content type="html"><![CDATA[<p></p><h2 id="intro">前  言</h2>恰逢清明时节，本打算和小伙伴去帝都摄影啥的，无奈人算不如天算，计划赶不上变化。然一想节假日景点人口爆满，索性退了票准备蜗居寝室几天集中折腾下自己想来已久的个人博客。由此便开始我的折腾之路…此博客主要用来记录自己在创建个人博客方面的一些尝试和经验，欢迎各位同好提意见和建议。<p></p>
+<h3 id="04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带"><a href="#04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带" class="headerlink" title="04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带"></a>04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带</h3><blockquote>
+<p>到Github提供的<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">纽带样式</a>中挑选一款，然后复制相对的代码<br>将代码粘贴到 theme\layout\layout.ejs中，放置在 最后，标签之前即可。<br>将代码里面的 将you改为你自己的github上的注册名即可。</p>
+</blockquote>
+<h3 id="04-09-七牛图床"><a href="#04-09-七牛图床" class="headerlink" title="04.09 七牛图床"></a>04.09 七牛图床</h3><blockquote>
+<p>使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛云存储</a>保存图片，通过七牛的图片外链进行网页图片的加载</p>
+</blockquote>
+<h3 id="04-07-自定义多说评论框样式"><a href="#04-07-自定义多说评论框样式" class="headerlink" title="04.07 自定义多说评论框样式"></a>04.07 自定义多说评论框样式</h3><p>使用百度分享将我的主页分享至微信微博和QQ好友；<br>增加多说评论框；<br><a href="https://github.com/HarbingWang/harbingwang.github.io/commit/1215d97ed2a99e12d3895121c9fab1f0dbeef3cb" target="_blank" rel="external">G</a>自定义多说的的CSS样式，修改多说评论框的动画效果，让其交互性更好；</p>
+<ul>
+<li>登录<a href="http://harbingwang1.duoshuo.com/admin/settings/" target="_blank" rel="external">多说后台</a>-&gt;设置-&gt;基本设置-&gt;自定义CSS</li>
+<li><a href="http://wsgzao.github.io/post/duoshuo/#多说后台自定义CSS" target="_blank" rel="external">多说评论显示UA(User Agent)</a><ul>
+<li>1.<a href="http://harbingwang.github.io/js/embed.js" target="_blank" rel="external">下载</a>embed.js </li>
+<li>2.获取多说ID</li>
+<li>3.本地修改embed.js</li>
+<li>4.上传embed.js</li>
+<li>5.修改多说调用地址</li>
+<li>6.多说后台自定义CSS</li>
+</ul>
+</li>
+</ul>
+<h3 id="04-06-逐步优化"><a href="#04-06-逐步优化" class="headerlink" title="04.06 逐步优化"></a>04.06 逐步优化</h3><blockquote>
+<p>定制侧边目录栏，暂且分为以下几个栏目：<br><a href="/archives/">所有文章</a> ：检索所有文章，其实这个版块一直很犹豫<br><a href="/tags/">标签云图</a> ：通过 Tag 将文章分类，减轻找文章的负担<br><a href="/books/">静心阅读</a> ：总结并分享一些自己看过的书籍及读后感<br><a href="/photos/">品味摄影</a> ：个人爱好，喜欢拍照，希望这个版块能够逐渐做起来<br><a href="/about/">雁过留声</a> ：为同好提供一个分享交流的独立版块，我期待您的声音<br>为<a href="/about/">雁过留声</a>栏目添加网易云音乐的播放器外链，分享一些个人比较喜欢的音乐；<br>在<code>main.style</code>文件中将原主题的纯背景色改为图片背景样式；<br>　查阅相关<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">文档</a>，通过添加代码实现首页只显示文章摘要</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">摘要结束的地方添加分段代码  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Excerpt</span> <span class="attr">in</span> <span class="attr">index</span> | 首页摘要&gt;</span> </span><br><span class="line">+ <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">The</span> <span class="attr">rest</span> <span class="attr">of</span> <span class="attr">contents</span> | 余下全文&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="04-05-更换主题"><a href="#04-05-更换主题" class="headerlink" title="04.05 更换主题"></a>04.05 更换主题</h3><blockquote>
+<p>在<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题</a>中折腾了<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">Raytaylorism</a> <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>等几款主题之后，由于个人比较喜欢美图和动画效果，所以最终确定了<a href="http://luuman.github.io/" target="_blank" rel="external">luuman</a>提供的主题<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">spfk</a>，打算在此基础上打造自己的主题。</p>
+</blockquote>
+<h3 id="04-04-搭建完成"><a href="#04-04-搭建完成" class="headerlink" title="04.04 搭建完成"></a>04.04 搭建完成</h3><blockquote>
+<ol>
+<li>经过两天的折腾，个人博客已经初步搭建完毕，当看到那道蓝色星球上梦幻般的白光时，那叫一个激动啊…我知道，我离我要的结果越来越近了，YEAH！<code>不要怂，就是怼！</code></li>
+<li>学习<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdone语法与Hexo指令</a>，为后期写文章做准备；</li>
+</ol>
+</blockquote>
+<h3 id="04-02-配置环境并搭建"><a href="#04-02-配置环境并搭建" class="headerlink" title="04.02 配置环境并搭建"></a>04.02 配置环境并搭建</h3><p>关于具体的配置过程，请参考：<a href="http://harbingwang.github.io/2016/04/06/201603HexoWithGithub/" target="_blank" rel="external">使用Hexo搭建静态博客并部署到Github</a> </p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a><br><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a><br><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客</a><br><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a><br><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[个人博客搭建与优化]]></title>
+      <url>http://yoursite.com/2014/01/01/201601PersonalBlogProgressing/</url>
+      <content type="html"><![CDATA[<p></p><h2 id="intro">前  言</h2>恰逢清明时节，本打算和小伙伴去帝都摄影啥的，无奈人算不如天算，计划赶不上变化。然一想节假日景点人口爆满，索性退了票准备蜗居寝室几天集中折腾下自己想来已久的个人博客。由此便开始我的折腾之路…此博客主要用来记录自己在创建个人博客方面的一些尝试和经验，欢迎各位同好提意见和建议。<p></p>
+<h3 id="04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带"><a href="#04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带" class="headerlink" title="04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带"></a>04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带</h3><blockquote>
+<p>到Github提供的<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">纽带样式</a>中挑选一款，然后复制相对的代码<br>将代码粘贴到 theme\layout\layout.ejs中，放置在 最后，标签之前即可。<br>将代码里面的 将you改为你自己的github上的注册名即可。</p>
+</blockquote>
+<h3 id="04-09-七牛图床"><a href="#04-09-七牛图床" class="headerlink" title="04.09 七牛图床"></a>04.09 七牛图床</h3><blockquote>
+<p>使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛云存储</a>保存图片，通过七牛的图片外链进行网页图片的加载</p>
+</blockquote>
+<h3 id="04-07-自定义多说评论框样式"><a href="#04-07-自定义多说评论框样式" class="headerlink" title="04.07 自定义多说评论框样式"></a>04.07 自定义多说评论框样式</h3><p>使用百度分享将我的主页分享至微信微博和QQ好友；<br>增加多说评论框；<br><a href="https://github.com/HarbingWang/harbingwang.github.io/commit/1215d97ed2a99e12d3895121c9fab1f0dbeef3cb" target="_blank" rel="external">G</a>自定义多说的的CSS样式，修改多说评论框的动画效果，让其交互性更好；</p>
+<ul>
+<li>登录<a href="http://harbingwang1.duoshuo.com/admin/settings/" target="_blank" rel="external">多说后台</a>-&gt;设置-&gt;基本设置-&gt;自定义CSS</li>
+<li><a href="http://wsgzao.github.io/post/duoshuo/#多说后台自定义CSS" target="_blank" rel="external">多说评论显示UA(User Agent)</a><ul>
+<li>1.<a href="http://harbingwang.github.io/js/embed.js" target="_blank" rel="external">下载</a>embed.js </li>
+<li>2.获取多说ID</li>
+<li>3.本地修改embed.js</li>
+<li>4.上传embed.js</li>
+<li>5.修改多说调用地址</li>
+<li>6.多说后台自定义CSS</li>
+</ul>
+</li>
+</ul>
+<h3 id="04-06-逐步优化"><a href="#04-06-逐步优化" class="headerlink" title="04.06 逐步优化"></a>04.06 逐步优化</h3><blockquote>
+<p>定制侧边目录栏，暂且分为以下几个栏目：<br><a href="/archives/">所有文章</a> ：检索所有文章，其实这个版块一直很犹豫<br><a href="/tags/">标签云图</a> ：通过 Tag 将文章分类，减轻找文章的负担<br><a href="/books/">静心阅读</a> ：总结并分享一些自己看过的书籍及读后感<br><a href="/photos/">品味摄影</a> ：个人爱好，喜欢拍照，希望这个版块能够逐渐做起来<br><a href="/about/">雁过留声</a> ：为同好提供一个分享交流的独立版块，我期待您的声音<br>为<a href="/about/">雁过留声</a>栏目添加网易云音乐的播放器外链，分享一些个人比较喜欢的音乐；<br>在<code>main.style</code>文件中将原主题的纯背景色改为图片背景样式；<br>　查阅相关<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">文档</a>，通过添加代码实现首页只显示文章摘要</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">摘要结束的地方添加分段代码  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Excerpt</span> <span class="attr">in</span> <span class="attr">index</span> | 首页摘要&gt;</span> </span><br><span class="line">+ <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">The</span> <span class="attr">rest</span> <span class="attr">of</span> <span class="attr">contents</span> | 余下全文&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="04-05-更换主题"><a href="#04-05-更换主题" class="headerlink" title="04.05 更换主题"></a>04.05 更换主题</h3><blockquote>
+<p>在<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题</a>中折腾了<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">Raytaylorism</a> <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>等几款主题之后，由于个人比较喜欢美图和动画效果，所以最终确定了<a href="http://luuman.github.io/" target="_blank" rel="external">luuman</a>提供的主题<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">spfk</a>，打算在此基础上打造自己的主题。</p>
+</blockquote>
+<h3 id="04-04-搭建完成"><a href="#04-04-搭建完成" class="headerlink" title="04.04 搭建完成"></a>04.04 搭建完成</h3><blockquote>
+<ol>
+<li>经过两天的折腾，个人博客已经初步搭建完毕，当看到那道蓝色星球上梦幻般的白光时，那叫一个激动啊…我知道，我离我要的结果越来越近了，YEAH！<code>不要怂，就是怼！</code></li>
+<li>学习<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdone语法与Hexo指令</a>，为后期写文章做准备；</li>
+</ol>
+</blockquote>
+<h3 id="04-02-配置环境并搭建"><a href="#04-02-配置环境并搭建" class="headerlink" title="04.02 配置环境并搭建"></a>04.02 配置环境并搭建</h3><p>关于具体的配置过程，请参考：<a href="http://harbingwang.github.io/2016/04/06/201603HexoWithGithub/" target="_blank" rel="external">使用Hexo搭建静态博客并部署到Github</a> </p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a><br><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a><br><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客</a><br><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a><br><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>

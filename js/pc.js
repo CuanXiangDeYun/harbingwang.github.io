@@ -27,9 +27,6 @@ define([], function(){
               '-ms-transform: translate(-' + idx * 100 + '%, 0);',
               'transform: translate(-' + idx * 100 + '%, 0);'
           ];
-        //$wrap.css({
-        //    "transform": "translate(-"+idx*100+"%, 0 )"
-        //});
         $wrap[0].style.cssText = transform.join('');
         $(".icon-wrap").addClass("hide");
         $(".icon-wrap").eq(idx).removeClass("hide");
@@ -90,7 +87,6 @@ define([], function(){
     var miniArchives = function(){
         if(yiliaConfig.isPost) {
             $(".post-list").addClass("toc-article");
-            $(".post-list-item a").attr("target","_blank");
             $("#post-nav-button > a:nth-child(2)").click(function() {
                 $("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle();
                 $(".post-list").toggle(300);
@@ -98,7 +94,7 @@ define([], function(){
                     $("#toc, #tocButton").toggle(200, function() {
                         if ($(".switch-area").is(":visible")) {
                             $("#toc, .switch-btn, .switch-area").toggle();
-                            $("#tocButton").attr("value", valueHide);
+                            $("#tocButton").attr("value", yiliaConfig.toc[0]);
                             }
                         });
                 }

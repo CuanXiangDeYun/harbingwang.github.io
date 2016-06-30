@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  
+
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
         <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
     <![endif]-->
 
-  <meta charset="utf-8">
-  
-  <title>Hexo搭建静态博客 | HarbingWang</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文主要介绍如何使用Hexo搭建个人静态博客，并将其部署到Github上。">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="HarbingWang" />
+
+
+
+<meta name="description" content="本文主要介绍如何使用Hexo搭建个人静态博客，并将其部署到Github上。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建静态博客">
 <meta property="og:url" content="http://yoursite.com/2014/10/01/1501HexoWithGithub/index.html">
@@ -20,64 +24,76 @@
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Fhexo%2Bgithub.png">
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F201604%2FImage2.png">
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F201604%2FQQ%E6%88%AA%E5%9B%BE20160411212342.png">
-<meta property="og:updated_time" content="2016-06-26T05:27:08.721Z">
+<meta property="og:updated_time" content="2016-06-30T06:10:00.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建静态博客">
 <meta name="twitter:description" content="本文主要介绍如何使用Hexo搭建个人静态博客，并将其部署到Github上。">
 <meta name="twitter:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Fhexo%2Bgithub.png">
-  
-    <link rel="alternative" href="/atom.xml" title="HarbingWang" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/head.png">
-  
-  
-      <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-  
-  
-      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-  
-      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-  
-  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script>
-      var yiliaConfig = {
-          fancybox: true,
-          animate: true,
-          isHome: false,
-          isPost: true,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false,
-          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-          search: true
-      }
-  </script>
 
-  
-      <script>
-          yiliaConfig.jquery_ui = [false];
-      </script>
-  
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
-  
-      <script>
-          yiliaConfig.rootUrl = "/";
-      </script>
-  
 
-  
-  
+    <link rel="alternate" href="/atom.xml" title="HarbingWang" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/head.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hexo搭建静态博客 | HarbingWang</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
 </head>
 <body>
   <div id="container">
@@ -98,7 +114,7 @@
 
         
             <form id="search-form">
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
             </form>
             <div id="local-search-result"></div>
@@ -154,9 +170,9 @@
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/archives/">所有文章</a></li>
+                            <li><a href="/archives/">文章</a></li>
                         
-                            <li><a href="/tags/">标签</a></li>
+                            <li><a href="/tags/">归档</a></li>
                         
                             <li><a href="/categories/读书笔记/">阅读</a></li>
                         
@@ -169,13 +185,15 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:18317897370@163.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:18317897370@163.com" title="Email"></a>
                             
-                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/2958701731/profile?topnav=1&wvr=6" title="新浪微博"></a>
+                                <a class="fa 新浪微博" href="http://weibo.com/2958701731/profile?topnav=1&wvr=6" title="新浪微博"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HarbingWang" title="GitHub"></a>
+                                <a class="fa GitHub" href="https://github.com/HarbingWang" title="GitHub"></a>
                             
-                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=45641031" title="网易云音乐"></a>
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=45641031" title="网易云音乐"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -193,11 +211,11 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/Harbingwang/">博客园</a>
+                      <a class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/Harbingwang/">博客园</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.netcan666.com/">Netcan</a>
+                      <a class="main-nav-link switch-friends-link" href="http://www.netcan666.com/">Netcan</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
                     </div>
                 </section>
@@ -235,9 +253,9 @@
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/archives/">所有文章</a></li>
+                    <li><a href="/archives/">文章</a></li>
                 
-                    <li><a href="/tags/">标签</a></li>
+                    <li><a href="/tags/">归档</a></li>
                 
                     <li><a href="/categories/读书笔记/">阅读</a></li>
                 
@@ -259,6 +277,8 @@
                             
                                 <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=45641031" title="网易云音乐"></a>
                             
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
                         </ul>
             </nav>
         </header>                
@@ -271,6 +291,17 @@
       <a href="/2014/10/01/1501HexoWithGithub/" class="article-date">
       <time datetime="2014-10-01T05:11:21.000Z" itemprop="datePublished">2014-10-01</time>
 </a>
+
+ 
+    <a href="/2014/10/01/1501HexoWithGithub/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count" ></span>
+        
+        
+    </a>
+
     </div>
   
   <div class="article-inner">
@@ -307,7 +338,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>Hexo</strong> 是一个基于<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>技术开发的纯静态博客系统，英文谐音“黑客”，听起来就很炫酷。Hexo具有简介、高效的特点，它能在几秒内将几百个文件快速生成静态网页，并且支持<a href="http://baike.baidu.com/link?url=4XofL-iZHmVBC1ItR0WE8qHCiFyINe-MdwBXFFCvk_3rdUXu9-Bgw7R8LG3wlxt8KX5vpraWJc34QLjJUtuHga" target="_blank" rel="external">Markdown</a>语法，因此近年来越来越多的程序员和博主们开始青睐于使用Hexo搭建个人博客。与<a href="https://cn.wordpress.org/" target="_blank" rel="external">Wordpress</a>相似，我们可以使用Hexo创建自己的博客，并且托管在<a href="https://pages.github.com/" target="_blank" rel="external">GitHubPages</a>等平台上面，当然也能绑定自己的域名，打造专属自己的网站。</p>
+        <div class="github-widget" data-repo="HarbingWang/harbingwang.github.io"></div>
+
+<p><strong>Hexo</strong> 是一个基于<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>技术开发的纯静态博客系统，英文谐音“黑客”，听起来就很炫酷。Hexo具有简介、高效的特点，它能在几秒内将几百个文件快速生成静态网页，并且支持<a href="http://baike.baidu.com/link?url=4XofL-iZHmVBC1ItR0WE8qHCiFyINe-MdwBXFFCvk_3rdUXu9-Bgw7R8LG3wlxt8KX5vpraWJc34QLjJUtuHga" target="_blank" rel="external">Markdown</a>语法，因此近年来越来越多的程序员和博主们开始青睐于使用Hexo搭建个人博客。与<a href="https://cn.wordpress.org/" target="_blank" rel="external">Wordpress</a>相似，我们可以使用Hexo创建自己的博客，并且托管在<a href="https://pages.github.com/" target="_blank" rel="external">GitHubPages</a>等平台上面，当然也能绑定自己的域名，打造专属自己的网站。</p>
 <p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2Fhexo%2Bgithub.png" alt="Hexo + Github"></p>
 <p>在我搭建博客初期一直有一个困惑，到底需不需要预先购买独立域名呢？答案是否定的！建设初期完全不需要预先购买域名，如果后期需要再购买也不迟。现在普遍流行的搭建方案是使用Hexo将我们写好的文件生成静态网页（关于如何生成，不必为此烦恼，在后面的环节中，只需要一句代码即可完成生成），随后，我们可以通过本地服务器预览我们的搭建效果；进行到这里，由于只是生成静态网页保存在本地，并不能通过链接进行访问，此时我们我们就需要一个更加强大的工具 —— <code>GithubPages</code>,来帮助我们部署博客，这些在文章后面都会有所有所涉及；关于使用Hexo搭建静态博客并部署到的教程，网络上有很多现成的教程，按部就班一般都能完成搭建。介于不同操作系统下部分步骤已有所不同，因此本文<code>Win7</code>环境下的搭建流程。整理过程中难免有所疏漏与失误，还请指正。</p>
 <p>以下我们将分三大步完成这次搭建：</p>
@@ -426,7 +459,7 @@
         <p><span>本文标题:</span><a href="/2014/10/01/1501HexoWithGithub/">Hexo搭建静态博客</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">HarbingWang</a></p>
         <p><span>发布时间:</span>2014-10-01, 13:11:21</p>
-        <p><span>最后更新:</span>2016-06-26, 13:27:08</p>
+        <p><span>最后更新:</span>2016-06-30, 14:10:00</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2014/10/01/1501HexoWithGithub/" title="Hexo搭建静态博客">http://yoursite.com/2014/10/01/1501HexoWithGithub/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2014/10/01/1501HexoWithGithub/　　作者: HarbingWang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -464,43 +497,17 @@
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置环境"><span class="toc-number">1.</span> <span class="toc-text">配置环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载并安装-Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">下载并安装 Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载并安装-Git"><span class="toc-number">1.2.</span> <span class="toc-text">下载并安装　Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Notepad-或-Sublime-Text3"><span class="toc-number">1.3.</span> <span class="toc-text">安装 Notepad++  或  Sublime Text3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装 Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建本地文件夹"><span class="toc-number">2.1.</span> <span class="toc-text">新建本地文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开-Git-Bash-Here"><span class="toc-number">2.2.</span> <span class="toc-text">打开 Git Bash Here</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Hexo-1"><span class="toc-number">2.3.</span> <span class="toc-text">安装 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖和插件"><span class="toc-number">2.4.</span> <span class="toc-text">安装依赖和插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化文件夹"><span class="toc-number">2.5.</span> <span class="toc-text">初始化文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动本地服务器"><span class="toc-number">2.6.</span> <span class="toc-text">启动本地服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器预览效果"><span class="toc-number">2.7.</span> <span class="toc-text">浏览器预览效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo相关指令请参考：Markdown语法-与-Hexo常用指令"><span class="toc-number">2.8.</span> <span class="toc-text">Hexo相关指令请参考：Markdown语法 与 Hexo常用指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置和使用Github"><span class="toc-number">3.</span> <span class="toc-text">配置和使用Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册Github"><span class="toc-number">3.1.</span> <span class="toc-text">注册Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库-Repository"><span class="toc-number">3.2.</span> <span class="toc-text">创建仓库 Repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置-Git"><span class="toc-number">3.3.</span> <span class="toc-text">设置 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查-SSH-keys"><span class="toc-number">3.4.</span> <span class="toc-text">检查 SSH keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成新的-SSH-keys"><span class="toc-number">3.5.</span> <span class="toc-text">生成新的 SSH keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-SSH-Key-到-GitHub"><span class="toc-number">3.6.</span> <span class="toc-text">添加 SSH Key 到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证-SSH-Key-是否成功加入到-GitHub"><span class="toc-number">3.7.</span> <span class="toc-text">验证 SSH Key 是否成功加入到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置-config-yml-文件"><span class="toc-number">3.8.</span> <span class="toc-text">配置 _config.yml 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git完成部署"><span class="toc-number">3.9.</span> <span class="toc-text">Git完成部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试搭建效果"><span class="toc-number">3.10.</span> <span class="toc-text">测试搭建效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出错参考"><span class="toc-number">4.</span> <span class="toc-text">出错参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">5.</span> <span class="toc-text">Reference</span></a></li></ol>
 </div>
 <style>
-    .left-col .switch-btn {
-        display: none;
-    }
+    .left-col .switch-btn,
     .left-col .switch-area {
         display: none;
     }
 </style>
 
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
 </script>
-
-
 
 
 
@@ -533,24 +540,60 @@
 
     
       <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2014/10/01/1501HexoWithGithub/" data-title="Hexo搭建静态博客" data-url="http://yoursite.com/2014/10/01/1501HexoWithGithub/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"harbingwang1"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://harbingwang.github.io/resources/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-</div>
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2014/10/01/1501HexoWithGithub/" data-title="Hexo搭建静态博客" data-url="http://yoursite.com/2014/10/01/1501HexoWithGithub/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"harbingwang1"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://harbingwang.github.io/resources/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
 
+        
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=harbingwang1&threads=2014/10/01/1501HexoWithGithub/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
+    </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
+</div>
     
 
 
@@ -589,7 +632,7 @@
                 2015-2016 HarbingWang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo强力驱动</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.0">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
@@ -617,53 +660,40 @@
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
 
 
-
-
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
     <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
