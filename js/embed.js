@@ -1,4 +1,5 @@
-
+//HelloDog -  http://wsgzao.github.io/post/duoshuo/
+//More info: http://moxfive.xyz/2015/09/29/duosuo-style
 //移动客户端判断开始
 function checkMobile() {
     var isiPad = navigator.userAgent.match(/iPad/i) != null;
@@ -11,7 +12,7 @@ function checkMobile() {
     }
     return false;
 }
-
+//移动客户端判断结束
 //管理员判断开始
 function sskadmin(e) {
     var ssk = '';
@@ -28,6 +29,7 @@ function sskadmin(e) {
     }
     return ssk;
 }
+
 //管理员判断结束
 //显UA开始
 function ua(e) {

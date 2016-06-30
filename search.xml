@@ -4,21 +4,15 @@
   
     
     <entry>
-      <title></title>
-      <url>http://yoursite.com/2016/06/27/20160624%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BHTTP%E3%80%81TCPIP%E5%8F%8ASocket%E5%9F%BA%E7%A1%80/</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[深圳]]></title>
-      <url>http://yoursite.com/2016/06/27/%E6%B7%B1%E5%9C%B3/</url>
+      <url>http://yoursite.com/2016/06/27/%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E6%B7%B1%E5%9C%B3/</url>
       <content type="html"><![CDATA[<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%2F20160626.jpg" alt="深圳机场"></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[《岛上书店》]]></title>
-      <url>http://yoursite.com/2016/06/27/%E3%80%8A%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97%E3%80%8B/</url>
+      <url>http://yoursite.com/2016/06/27/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E3%80%8A%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97%E3%80%8B/</url>
       <content type="html"><![CDATA[<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%2F%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97.jpg" alt="岛上书店"><br>岛上书店是间维多利亚风格的小屋，门廊上挂着褪色的招牌，上面写着：</p>
 <blockquote>
 <p>没有谁是一座孤岛，每本书都是一个世界。</p>
@@ -28,7 +22,7 @@
     
     <entry>
       <title><![CDATA[初探网络编程之HTTP/HTTPS、TCP/IP及Socket基础]]></title>
-      <url>http://yoursite.com/2016/03/19/1601%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BHTTP%E3%80%81TCPIP%E5%8F%8ASocket%E5%9F%BA%E7%A1%80/</url>
+      <url>http://yoursite.com/2016/06/25/1603%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B9%8BHTTP%E3%80%81TCPIP%E5%8F%8ASocket%E5%9F%BA%E7%A1%80/</url>
       <content type="html"><![CDATA[<p>最近在做网络编程的时候对HTTP、TCP/IP、Socket等几个概念有所困惑，虽然之前也有所接触但始终未深入了解，遂决心整理下这方面的知识，以加深理解。</p>
 <a id="more"></a>
 <p>文章参考了诸多大神的博客和一定的计算机网络书籍，只做知识整理巩固之用，内容相对基础，大神请绕道而过。</p>
@@ -65,7 +59,7 @@
     
     <entry>
       <title><![CDATA[iOS中的消息传递机制]]></title>
-      <url>http://yoursite.com/2015/10/22/1503iOS%E4%B8%AD%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/</url>
+      <url>http://yoursite.com/2016/05/22/1602iOS%E4%B8%AD%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/</url>
       <content type="html"><![CDATA[<p>简要介绍iOS中几种常用的消息传递机制：KVO、Notification、delegation、block 以及Target-Action模式</p>
 <a id="more"></a>
 <h2 id="KVO"><a href="#KVO" class="headerlink" title="KVO"></a>KVO</h2><p>KVO提供了这样一种机制：当对象中的某个属性值发生了改变，可以对这些值的观察者做出通知。KVO的实现包含在Foundation里面，基于Foundation构建的许多Framework对KVO都有所依赖。要想了解更多关于如何使用KVO，可以阅读本期由Daniel写的的KVO和KVC文章。</p>
@@ -93,8 +87,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Git使用手册]]></title>
+      <url>http://yoursite.com/2016/01/11/1601TheUsageOfGitBash/</url>
+      <content type="html"><![CDATA[<p><a href="http://ninghao.net/blog/1379" target="_blank" rel="external">Git 入门手册</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.jeffjade.com/2014/12/22/2014-12-22-gitmemo/" target="_blank" rel="external">Git常用命令备忘</a><br><a href="https://blog.6ag.cn/978.html" target="_blank" rel="external">常用Git命令合集</a></p>
+<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2F%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85.jpg" alt="1"><br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FIP%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.jpg" alt="1"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Markdown语法 与 Hexo常用指令]]></title>
-      <url>http://yoursite.com/2015/05/05/1402HexoAndMarkdown/</url>
+      <url>http://yoursite.com/2015/05/05/1503HexoAndMarkdown/</url>
       <content type="html"><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown</a>是一种超轻量级的<code>标记语言</code>，常用的标记符号不超过十个，相对于更为复杂的<code>HTML标记语言</code>来讲，<code>Markdown</code>实在简便多了，因此学习成本也不是很大。</p>
 <a id="more"></a>
 <p>更多关于Markdown的认识，我们可以参考：<a href="http://sspai.com/25137/" target="_blank" rel="external">认识与入门 Markdown</a></p>
@@ -298,16 +300,49 @@ _   底线
     </entry>
     
     <entry>
-      <title><![CDATA[Git使用手册]]></title>
-      <url>http://yoursite.com/2015/01/11/1502TheUsageOfGitBash/</url>
-      <content type="html"><![CDATA[<p><a href="http://ninghao.net/blog/1379" target="_blank" rel="external">Git 入门手册</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.jeffjade.com/2014/12/22/2014-12-22-gitmemo/" target="_blank" rel="external">Git常用命令备忘</a><br><a href="https://blog.6ag.cn/978.html" target="_blank" rel="external">常用Git命令合集</a></p>
-<p><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2F%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85.jpg" alt="1"><br><img src="http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F160428%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%2FIP%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.jpg" alt="1"></p>
+      <title><![CDATA[个人博客搭建与优化]]></title>
+      <url>http://yoursite.com/2015/04/25/1502PersonalBlogProgressing/</url>
+      <content type="html"><![CDATA[<p></p><h2 id="intro">前  言</h2>恰逢清明时节，本打算和小伙伴去帝都摄影啥的，无奈人算不如天算，计划赶不上变化。然一想节假日景点人口爆满，索性退了票准备蜗居寝室几天集中折腾下自己想来已久的个人博客。由此便开始我的折腾之路…此博客主要用来记录自己在创建个人博客方面的一些尝试和经验，欢迎各位同好提意见和建议。<p></p>
+<h3 id="04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带"><a href="#04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带" class="headerlink" title="04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带"></a>04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带</h3><blockquote>
+<p>到Github提供的<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">纽带样式</a>中挑选一款，然后复制相对的代码<br>将代码粘贴到 theme\layout\layout.ejs中，放置在 最后，标签之前即可。<br>将代码里面的 将you改为你自己的github上的注册名即可。</p>
+</blockquote>
+<h3 id="04-09-七牛图床"><a href="#04-09-七牛图床" class="headerlink" title="04.09 七牛图床"></a>04.09 七牛图床</h3><blockquote>
+<p>使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛云存储</a>保存图片，通过七牛的图片外链进行网页图片的加载</p>
+</blockquote>
+<h3 id="04-07-自定义多说评论框样式"><a href="#04-07-自定义多说评论框样式" class="headerlink" title="04.07 自定义多说评论框样式"></a>04.07 自定义多说评论框样式</h3><p>使用百度分享将我的主页分享至微信微博和QQ好友；<br>增加多说评论框；<br><a href="https://github.com/HarbingWang/harbingwang.github.io/commit/1215d97ed2a99e12d3895121c9fab1f0dbeef3cb" target="_blank" rel="external">G</a>自定义多说的的CSS样式，修改多说评论框的动画效果，让其交互性更好；</p>
+<ul>
+<li>登录<a href="http://harbingwang1.duoshuo.com/admin/settings/" target="_blank" rel="external">多说后台</a>-&gt;设置-&gt;基本设置-&gt;自定义CSS</li>
+<li><a href="http://wsgzao.github.io/post/duoshuo/#多说后台自定义CSS" target="_blank" rel="external">多说评论显示UA(User Agent)</a><ul>
+<li>1.<a href="http://harbingwang.github.io/js/embed.js" target="_blank" rel="external">下载</a>embed.js </li>
+<li>2.获取多说ID</li>
+<li>3.本地修改embed.js</li>
+<li>4.上传embed.js</li>
+<li>5.修改多说调用地址</li>
+<li>6.多说后台自定义CSS</li>
+</ul>
+</li>
+</ul>
+<h3 id="04-06-逐步优化"><a href="#04-06-逐步优化" class="headerlink" title="04.06 逐步优化"></a>04.06 逐步优化</h3><blockquote>
+<p>定制侧边目录栏，暂且分为以下几个栏目：<br><a href="/archives/">所有文章</a> ：检索所有文章，其实这个版块一直很犹豫<br><a href="/tags/">标签云图</a> ：通过 Tag 将文章分类，减轻找文章的负担<br><a href="/books/">静心阅读</a> ：总结并分享一些自己看过的书籍及读后感<br><a href="/photos/">品味摄影</a> ：个人爱好，喜欢拍照，希望这个版块能够逐渐做起来<br><a href="/about/">雁过留声</a> ：为同好提供一个分享交流的独立版块，我期待您的声音<br>为<a href="/about/">雁过留声</a>栏目添加网易云音乐的播放器外链，分享一些个人比较喜欢的音乐；<br>在<code>main.style</code>文件中将原主题的纯背景色改为图片背景样式；<br>　查阅相关<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">文档</a>，通过添加代码实现首页只显示文章摘要</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">摘要结束的地方添加分段代码  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Excerpt</span> <span class="attr">in</span> <span class="attr">index</span> | 首页摘要&gt;</span> </span><br><span class="line">+ <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">The</span> <span class="attr">rest</span> <span class="attr">of</span> <span class="attr">contents</span> | 余下全文&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="04-05-更换主题"><a href="#04-05-更换主题" class="headerlink" title="04.05 更换主题"></a>04.05 更换主题</h3><blockquote>
+<p>在<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题</a>中折腾了<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">Raytaylorism</a> <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>等几款主题之后，由于个人比较喜欢美图和动画效果，所以最终确定了<a href="http://luuman.github.io/" target="_blank" rel="external">luuman</a>提供的主题<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">spfk</a>，打算在此基础上打造自己的主题。</p>
+</blockquote>
+<h3 id="04-04-搭建完成"><a href="#04-04-搭建完成" class="headerlink" title="04.04 搭建完成"></a>04.04 搭建完成</h3><blockquote>
+<ol>
+<li>经过两天的折腾，个人博客已经初步搭建完毕，当看到那道蓝色星球上梦幻般的白光时，那叫一个激动啊…我知道，我离我要的结果越来越近了，YEAH！<code>不要怂，就是怼！</code></li>
+<li>学习<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdone语法与Hexo指令</a>，为后期写文章做准备；</li>
+</ol>
+</blockquote>
+<h3 id="04-02-配置环境并搭建"><a href="#04-02-配置环境并搭建" class="headerlink" title="04.02 配置环境并搭建"></a>04.02 配置环境并搭建</h3><p>关于具体的配置过程，请参考：<a href="http://harbingwang.github.io/2016/04/06/201603HexoWithGithub/" target="_blank" rel="external">使用Hexo搭建静态博客并部署到Github</a> </p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a><br><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a><br><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客</a><br><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a><br><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Hexo搭建静态博客]]></title>
-      <url>http://yoursite.com/2014/10/01/1501HexoWithGithub/</url>
+      <url>http://yoursite.com/2015/04/01/1501HexoWithGithub/</url>
       <content type="html"><![CDATA[<div class="github-widget" data-repo="HarbingWang/harbingwang.github.io"></div>
 
 <p><strong>Hexo</strong> 是一个基于<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>技术开发的纯静态博客系统，英文谐音“黑客”，听起来就很炫酷。Hexo具有简介、高效的特点，它能在几秒内将几百个文件快速生成静态网页，并且支持<a href="http://baike.baidu.com/link?url=4XofL-iZHmVBC1ItR0WE8qHCiFyINe-MdwBXFFCvk_3rdUXu9-Bgw7R8LG3wlxt8KX5vpraWJc34QLjJUtuHga" target="_blank" rel="external">Markdown</a>语法，因此近年来越来越多的程序员和博主们开始青睐于使用Hexo搭建个人博客。与<a href="https://cn.wordpress.org/" target="_blank" rel="external">Wordpress</a>相似，我们可以使用Hexo创建自己的博客，并且托管在<a href="https://pages.github.com/" target="_blank" rel="external">GitHubPages</a>等平台上面，当然也能绑定自己的域名，打造专属自己的网站。</p>
@@ -418,88 +453,6 @@ _   底线
 <li><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </li>
 <li><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
 </ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[个人博客搭建与优化]]></title>
-      <url>http://yoursite.com/2014/01/01/1401PersonalBlogProgressing/</url>
-      <content type="html"><![CDATA[<p></p><h2 id="intro">前  言</h2>恰逢清明时节，本打算和小伙伴去帝都摄影啥的，无奈人算不如天算，计划赶不上变化。然一想节假日景点人口爆满，索性退了票准备蜗居寝室几天集中折腾下自己想来已久的个人博客。由此便开始我的折腾之路…此博客主要用来记录自己在创建个人博客方面的一些尝试和经验，欢迎各位同好提意见和建议。<p></p>
-<h3 id="04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带"><a href="#04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带" class="headerlink" title="04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带"></a>04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带</h3><blockquote>
-<p>到Github提供的<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">纽带样式</a>中挑选一款，然后复制相对的代码<br>将代码粘贴到 theme\layout\layout.ejs中，放置在 最后，标签之前即可。<br>将代码里面的 将you改为你自己的github上的注册名即可。</p>
-</blockquote>
-<h3 id="04-09-七牛图床"><a href="#04-09-七牛图床" class="headerlink" title="04.09 七牛图床"></a>04.09 七牛图床</h3><blockquote>
-<p>使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛云存储</a>保存图片，通过七牛的图片外链进行网页图片的加载</p>
-</blockquote>
-<h3 id="04-07-自定义多说评论框样式"><a href="#04-07-自定义多说评论框样式" class="headerlink" title="04.07 自定义多说评论框样式"></a>04.07 自定义多说评论框样式</h3><p>使用百度分享将我的主页分享至微信微博和QQ好友；<br>增加多说评论框；<br><a href="https://github.com/HarbingWang/harbingwang.github.io/commit/1215d97ed2a99e12d3895121c9fab1f0dbeef3cb" target="_blank" rel="external">G</a>自定义多说的的CSS样式，修改多说评论框的动画效果，让其交互性更好；</p>
-<ul>
-<li>登录<a href="http://harbingwang1.duoshuo.com/admin/settings/" target="_blank" rel="external">多说后台</a>-&gt;设置-&gt;基本设置-&gt;自定义CSS</li>
-<li><a href="http://wsgzao.github.io/post/duoshuo/#多说后台自定义CSS" target="_blank" rel="external">多说评论显示UA(User Agent)</a><ul>
-<li>1.<a href="http://harbingwang.github.io/js/embed.js" target="_blank" rel="external">下载</a>embed.js </li>
-<li>2.获取多说ID</li>
-<li>3.本地修改embed.js</li>
-<li>4.上传embed.js</li>
-<li>5.修改多说调用地址</li>
-<li>6.多说后台自定义CSS</li>
-</ul>
-</li>
-</ul>
-<h3 id="04-06-逐步优化"><a href="#04-06-逐步优化" class="headerlink" title="04.06 逐步优化"></a>04.06 逐步优化</h3><blockquote>
-<p>定制侧边目录栏，暂且分为以下几个栏目：<br><a href="/archives/">所有文章</a> ：检索所有文章，其实这个版块一直很犹豫<br><a href="/tags/">标签云图</a> ：通过 Tag 将文章分类，减轻找文章的负担<br><a href="/books/">静心阅读</a> ：总结并分享一些自己看过的书籍及读后感<br><a href="/photos/">品味摄影</a> ：个人爱好，喜欢拍照，希望这个版块能够逐渐做起来<br><a href="/about/">雁过留声</a> ：为同好提供一个分享交流的独立版块，我期待您的声音<br>为<a href="/about/">雁过留声</a>栏目添加网易云音乐的播放器外链，分享一些个人比较喜欢的音乐；<br>在<code>main.style</code>文件中将原主题的纯背景色改为图片背景样式；<br>　查阅相关<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">文档</a>，通过添加代码实现首页只显示文章摘要</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">摘要结束的地方添加分段代码  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Excerpt</span> <span class="attr">in</span> <span class="attr">index</span> | 首页摘要&gt;</span> </span><br><span class="line">+ <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">The</span> <span class="attr">rest</span> <span class="attr">of</span> <span class="attr">contents</span> | 余下全文&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="04-05-更换主题"><a href="#04-05-更换主题" class="headerlink" title="04.05 更换主题"></a>04.05 更换主题</h3><blockquote>
-<p>在<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题</a>中折腾了<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">Raytaylorism</a> <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>等几款主题之后，由于个人比较喜欢美图和动画效果，所以最终确定了<a href="http://luuman.github.io/" target="_blank" rel="external">luuman</a>提供的主题<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">spfk</a>，打算在此基础上打造自己的主题。</p>
-</blockquote>
-<h3 id="04-04-搭建完成"><a href="#04-04-搭建完成" class="headerlink" title="04.04 搭建完成"></a>04.04 搭建完成</h3><blockquote>
-<ol>
-<li>经过两天的折腾，个人博客已经初步搭建完毕，当看到那道蓝色星球上梦幻般的白光时，那叫一个激动啊…我知道，我离我要的结果越来越近了，YEAH！<code>不要怂，就是怼！</code></li>
-<li>学习<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdone语法与Hexo指令</a>，为后期写文章做准备；</li>
-</ol>
-</blockquote>
-<h3 id="04-02-配置环境并搭建"><a href="#04-02-配置环境并搭建" class="headerlink" title="04.02 配置环境并搭建"></a>04.02 配置环境并搭建</h3><p>关于具体的配置过程，请参考：<a href="http://harbingwang.github.io/2016/04/06/201603HexoWithGithub/" target="_blank" rel="external">使用Hexo搭建静态博客并部署到Github</a> </p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a><br><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a><br><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客</a><br><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a><br><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[个人博客搭建与优化]]></title>
-      <url>http://yoursite.com/2014/01/01/201601PersonalBlogProgressing/</url>
-      <content type="html"><![CDATA[<p></p><h2 id="intro">前  言</h2>恰逢清明时节，本打算和小伙伴去帝都摄影啥的，无奈人算不如天算，计划赶不上变化。然一想节假日景点人口爆满，索性退了票准备蜗居寝室几天集中折腾下自己想来已久的个人博客。由此便开始我的折腾之路…此博客主要用来记录自己在创建个人博客方面的一些尝试和经验，欢迎各位同好提意见和建议。<p></p>
-<h3 id="04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带"><a href="#04-11-为页面添加一个-Github-的-“Fork-me-on-Github”-彩带" class="headerlink" title="04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带"></a>04.11 为页面添加一个 Github 的 “Fork me on Github” 彩带</h3><blockquote>
-<p>到Github提供的<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">纽带样式</a>中挑选一款，然后复制相对的代码<br>将代码粘贴到 theme\layout\layout.ejs中，放置在 最后，标签之前即可。<br>将代码里面的 将you改为你自己的github上的注册名即可。</p>
-</blockquote>
-<h3 id="04-09-七牛图床"><a href="#04-09-七牛图床" class="headerlink" title="04.09 七牛图床"></a>04.09 七牛图床</h3><blockquote>
-<p>使用<a href="https://portal.qiniu.com/signup?code=3liikxpwgqm36" target="_blank" rel="external">七牛云存储</a>保存图片，通过七牛的图片外链进行网页图片的加载</p>
-</blockquote>
-<h3 id="04-07-自定义多说评论框样式"><a href="#04-07-自定义多说评论框样式" class="headerlink" title="04.07 自定义多说评论框样式"></a>04.07 自定义多说评论框样式</h3><p>使用百度分享将我的主页分享至微信微博和QQ好友；<br>增加多说评论框；<br><a href="https://github.com/HarbingWang/harbingwang.github.io/commit/1215d97ed2a99e12d3895121c9fab1f0dbeef3cb" target="_blank" rel="external">G</a>自定义多说的的CSS样式，修改多说评论框的动画效果，让其交互性更好；</p>
-<ul>
-<li>登录<a href="http://harbingwang1.duoshuo.com/admin/settings/" target="_blank" rel="external">多说后台</a>-&gt;设置-&gt;基本设置-&gt;自定义CSS</li>
-<li><a href="http://wsgzao.github.io/post/duoshuo/#多说后台自定义CSS" target="_blank" rel="external">多说评论显示UA(User Agent)</a><ul>
-<li>1.<a href="http://harbingwang.github.io/js/embed.js" target="_blank" rel="external">下载</a>embed.js </li>
-<li>2.获取多说ID</li>
-<li>3.本地修改embed.js</li>
-<li>4.上传embed.js</li>
-<li>5.修改多说调用地址</li>
-<li>6.多说后台自定义CSS</li>
-</ul>
-</li>
-</ul>
-<h3 id="04-06-逐步优化"><a href="#04-06-逐步优化" class="headerlink" title="04.06 逐步优化"></a>04.06 逐步优化</h3><blockquote>
-<p>定制侧边目录栏，暂且分为以下几个栏目：<br><a href="/archives/">所有文章</a> ：检索所有文章，其实这个版块一直很犹豫<br><a href="/tags/">标签云图</a> ：通过 Tag 将文章分类，减轻找文章的负担<br><a href="/books/">静心阅读</a> ：总结并分享一些自己看过的书籍及读后感<br><a href="/photos/">品味摄影</a> ：个人爱好，喜欢拍照，希望这个版块能够逐渐做起来<br><a href="/about/">雁过留声</a> ：为同好提供一个分享交流的独立版块，我期待您的声音<br>为<a href="/about/">雁过留声</a>栏目添加网易云音乐的播放器外链，分享一些个人比较喜欢的音乐；<br>在<code>main.style</code>文件中将原主题的纯背景色改为图片背景样式；<br>　查阅相关<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">文档</a>，通过添加代码实现首页只显示文章摘要</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">摘要结束的地方添加分段代码  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Excerpt</span> <span class="attr">in</span> <span class="attr">index</span> | 首页摘要&gt;</span> </span><br><span class="line">+ <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">The</span> <span class="attr">rest</span> <span class="attr">of</span> <span class="attr">contents</span> | 余下全文&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="04-05-更换主题"><a href="#04-05-更换主题" class="headerlink" title="04.05 更换主题"></a>04.05 更换主题</h3><blockquote>
-<p>在<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题</a>中折腾了<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">Raytaylorism</a> <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>等几款主题之后，由于个人比较喜欢美图和动画效果，所以最终确定了<a href="http://luuman.github.io/" target="_blank" rel="external">luuman</a>提供的主题<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">spfk</a>，打算在此基础上打造自己的主题。</p>
-</blockquote>
-<h3 id="04-04-搭建完成"><a href="#04-04-搭建完成" class="headerlink" title="04.04 搭建完成"></a>04.04 搭建完成</h3><blockquote>
-<ol>
-<li>经过两天的折腾，个人博客已经初步搭建完毕，当看到那道蓝色星球上梦幻般的白光时，那叫一个激动啊…我知道，我离我要的结果越来越近了，YEAH！<code>不要怂，就是怼！</code></li>
-<li>学习<a href="http://harbingwang.github.io/2016/04/05/201602HexoAndMarkdown/" target="_blank" rel="external">Markdone语法与Hexo指令</a>，为后期写文章做准备；</li>
-</ol>
-</blockquote>
-<h3 id="04-02-配置环境并搭建"><a href="#04-02-配置环境并搭建" class="headerlink" title="04.02 配置环境并搭建"></a>04.02 配置环境并搭建</h3><p>关于具体的配置过程，请参考：<a href="http://harbingwang.github.io/2016/04/06/201603HexoWithGithub/" target="_blank" rel="external">使用Hexo搭建静态博客并部署到Github</a> </p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://llqy.github.io/2016/03/11/hexo-%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81blog%E4%BA%8Egithub/" target="_blank" rel="external">hexo 部署静态blog于github</a><br><a href="http://ninghao.net/blog/1412" target="_blank" rel="external">使用 Hexo 生成一套静态博客网页</a><br><a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客</a><br><a href="http://eric.ec/blog/hexo-independent-blog-new-ways.html" target="_blank" rel="external">Hexo：独立博客新玩法</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">hexo–搭建</a><br><a href="http://echovic.github.io/2016/03/03/My-New-Post/" target="_blank" rel="external">搭建Hexo个人博客部署到github</a> </p>
 ]]></content>
     </entry>
     
