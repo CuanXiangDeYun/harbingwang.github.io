@@ -288,15 +288,6 @@
       <time datetime="2015-04-25T05:11:21.000Z" itemprop="datePublished">2015-04-25</time>
 </a>
 
- 
-    <a href="/2015/04/25/1502PersonalBlogProgressing/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-            <span class="ds-thread-count" ></span>
-        
-        
-    </a>
 
     </div>
   
@@ -464,59 +455,18 @@
     <div id="comment-box" ></div>
     <div class="ds-thread" id="ds-thread" data-thread-key="2015/04/25/1502PersonalBlogProgressing/" data-title="个人博客搭建与优化" data-url="http://yoursite.com/2015/04/25/1502PersonalBlogProgressing/"></div>
     <script>
-        var duoshuoQuery = {short_name:"[object Object]"};
-		(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
+        var duoshuoQuery = {short_name:"harbingwang1"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
 
-		ds.src = 'http://harbingwang.github.io/js/embed.js';
-		/*上面是我自己的 embed.js 链接，请改为你自己的地址*/
-
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-		})();
-
-        
-            // Add comment count
-            $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=harbingwang1&threads=2015/04/25/1502PersonalBlogProgressing/&callback=?";
-                $.getJSON(jsonUrl, function(result){
-                    $.each(result.response, function(i, field){
-                        var value = field.comments;
-                        if (value > 0) {
-                            $(".count-comment").text(value);
-                            return;
-                        }
-                    })
-                })
-            })
         
     </script>
     
-    <aside class="comment-bar">
-        <a href="javascript:void(0);">
-            <i class="fa fa-commenting-o animated infinite pulse"></i>
-            <i class="fa fa-spinner fa-pulse"></i>
-            <span class="count-comment"></span>
-        </a>
-    </aside>
-    <script>
-        var $commentBar = $("#comments aside.comment-bar");
-        var load$hide = function(){
-            $commentBar.find("a > i").toggle();
-            loadComment();
-            $commentBar.fadeOut(800);
-        }
-        $commentBar.click(function(){
-            load$hide();
-        })
-        $commentBar.children("a").hover(function(){
-            load$hide();
-        })
-        if (window.location.hash === "#comments") {
-            load$hide();
-        }
-    </script>
+    <script> loadComment(); </script>
 
 </div>
     
@@ -619,6 +569,7 @@
         }
     
 </script>
+
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
