@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-20T15:30:48.080Z</updated>
+  <updated>2016-08-21T15:19:31.308Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2016/08/20/1605%E5%AE%9E%E7%94%A8%E5%BC%80%E5%8F%91%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7%E9%9B%86%E9%94%A6/"/>
-    <id>http://yoursite.com/2016/08/20/1605实用开发写作工具集锦/</id>
-    <published>2016-08-20T15:26:43.428Z</published>
-    <updated>2016-08-20T15:30:48.080Z</updated>
+    <title>实用工具集锦</title>
+    <link href="http://yoursite.com/2016/08/21/1605%E5%AE%9E%E7%94%A8%E5%BC%80%E5%8F%91%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7%E9%9B%86%E9%94%A6/"/>
+    <id>http://yoursite.com/2016/08/21/1605实用开发写作工具集锦/</id>
+    <published>2016-08-21T14:48:21.000Z</published>
+    <updated>2016-08-21T15:19:31.308Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;Tools&quot;&gt;&lt;a href=&quot;#Tools&quot; class=&quot;headerlink&quot; title=&quot;Tools&quot;&gt;&lt;/a&gt;Tools&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h3 id=&quot;Xcode自动注释插件-VVDocumenter&quot;&gt;&lt;a href=&quot;#Xcode自动注释插件-VVDocumenter&quot; class=&quot;headerlink&quot; title=&quot;Xcode自动注释插件:VVDocumenter&quot;&gt;&lt;/a&gt;Xcode自动注释插件:VVDocumenter&lt;/h3&gt;&lt;p&gt;下载地址 &lt;a href=&quot;https://github.com/onevcat/VVDocumenter-Xcode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/onevcat/VVDocumenter-Xcode&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;安装方法&quot;&gt;&lt;a href=&quot;#安装方法&quot; class=&quot;headerlink&quot; title=&quot;安装方法&quot;&gt;&lt;/a&gt;安装方法&lt;/h4&gt;&lt;p&gt;下载完成后,用Xcode工程打开,按&lt;strong&gt;command + B&lt;/strong&gt;, Build成功后,可以在&lt;code&gt;~/Library/Application Support/Developer/Shared/Xcode/Plug-ins&lt;/code&gt; 文件夹下看到&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/VVDocumenter/VVDocumenter.png&quot; alt=&quot;VVDocumenter&quot;&gt;&lt;br&gt;插件需重启Xcode后生效&lt;br&gt;插件设置方法:&lt;br&gt;在Xcode菜单,Window选项可以对插件进行一些设置&lt;/p&gt;
@@ -38,11 +39,154 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Tools&quot;&gt;&lt;a href=&quot;#Tools&quot; class=&quot;headerlink&quot; title=&quot;Tools&quot;&gt;&lt;/a&gt;Tools&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h3 id=&quot;Xcode自动注释插件-VVDocumenter&quot;&gt;&lt;a href=&quot;#Xcod
+      本博客主要记录一些日常开发写作中用到的工具。
     
     </summary>
     
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Xcode" scheme="http://yoursite.com/tags/Xcode/"/>
+    
+      <category term="MarkDown" scheme="http://yoursite.com/tags/MarkDown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora - 颠覆写作体验的免费极简 Markdown 编辑器！</title>
+    <link href="http://yoursite.com/2016/08/20/1604Typora-%E9%A2%A0%E8%A6%86%E5%86%99%E4%BD%9C%E4%BD%93%E9%AA%8C%E7%9A%84%E5%85%8D%E8%B4%B9%E6%9E%81%E7%AE%80%20Markdown%20%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%81/"/>
+    <id>http://yoursite.com/2016/08/20/1604Typora-颠覆写作体验的免费极简 Markdown 编辑器！/</id>
+    <published>2016-08-20T05:11:21.000Z</published>
+    <updated>2016-08-21T15:19:37.037Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Typora/typora_banner.jpg&quot; alt=&quot;Typora - 颠覆写作体验的免费极简 Markdown 编辑器！好用的 MD 格式阅读器&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.iplaysoft.com/tag/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown&lt;/a&gt; (MD) 是现在最流行的一种文档书写语言格式，用户只需用一些非常「简单易记」的语法就能轻松写出一篇具有良好的排版和可读性的文章，因此大受欢迎，渐渐已成为互联网写作的新潮流。&lt;/p&gt;
+&lt;p&gt;通过 &lt;strong&gt;Markdown&lt;/strong&gt; 写作的语法非常简单易上手，譬如用两个星号包围文字即可实现&lt;strong&gt;加粗效果&lt;/strong&gt;，&lt;em&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/em&gt;，三个减号- - -输出一条分割线等等。在写作时打字跟排版可以一气呵成，熟练后那种高效无干扰的流畅输入绝对会让你有抛弃 &lt;a href=&quot;http://www.iplaysoft.com/office2016.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Word&lt;/a&gt; 之类“重量级”软件的冲动……&lt;/p&gt;
+&lt;p&gt;Typora真心好用的极简免费跨平台Markdown编辑器&lt;/p&gt;
+&lt;p&gt;现在很多软件 (如 &lt;a href=&quot;http://www.iplaysoft.com/visual-studio-code.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studio Code&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/leanote.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Leanote&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/dayone.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DayOne&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/wiz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为知笔记&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/simplenote.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Simplenote&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/atom.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Atom&lt;/a&gt;、&lt;a href=&quot;http://www.iplaysoft.com/everedit.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;EverEdit&lt;/a&gt;) 或网站 (如 &lt;a href=&quot;http://www.iplaysoft.com/github-desktop.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;、&lt;a href=&quot;https://zh.wikipedia.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基&lt;/a&gt;、&lt;a href=&quot;http://www.jianshu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简书&lt;/a&gt;) 都已支持 Markdown 语法了。很多下载回来的软件说明也是 .md 或 .markdown 格式的文本文档，不管你是想要写作还是需要阅读，都需要一个简单好用的 &lt;strong&gt;Markdown 编辑器/阅读器&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Typora/typora.jpg&quot; alt=&quot;Typora Markdown 编辑器&quot;&gt;&lt;/p&gt;
+&lt;p&gt;你可能会发现，虽然现在的 &lt;a href=&quot;http://www.iplaysoft.com/tag/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 编辑器&lt;/a&gt;多如牛毛，但他们的交互形式基本都是将「&lt;a href=&quot;http://www.iplaysoft.com/tag/%E7%BC%96%E8%BE%91&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;编辑&lt;/a&gt;」和「预览」分离开来的，要么是直接左右排列编辑和预览窗口，要么是要在两种模式之间来回切换，实在是麻烦且不够直观。&lt;strong&gt;而 Typora 则是用创新完全颠覆了这种传统的交互模式&lt;/strong&gt;，它只使用一个窗口，却能优雅地实现同时将代码编辑与预览「一体化」结合起来！从而为用户带来更加流畅直观的「所见即所得的 Markdown 写作体验」。&lt;/p&gt;
+&lt;p&gt;行云流水的高效输入体验，极简但不简单！&lt;/p&gt;
+&lt;p&gt;你只需在 &lt;img src=&quot;http://www.iplaysoft.com/typora.html&quot; alt=&quot;Typora&quot;&gt; 打字时输入正确的 Markdown 语法标记 (如 二级标题、 &lt;strong&gt;粗体&lt;/strong&gt;)，软件就像触发了键盘&lt;a href=&quot;http://www.iplaysoft.com/tag/%E7%83%AD%E9%94%AE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;快捷键&lt;/a&gt;一样，将对应的文字会即时转变为它们应该成为的样子。斜体、加粗、插入图片、引用、插入图片、代码、表格、有序列表等等操作就在你敲完代码的一瞬间通通魔法般地“变成现实”，你在&lt;a href=&quot;http://www.iplaysoft.com/tag/%E7%BC%96%E8%BE%91%E5%99%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;编辑器&lt;/a&gt;上看到的直接就是 Markdown 最终的排版效果了，这种行云流水般的写作体验真的非常非常的棒！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Typora/typora-gif.gif&quot; alt=&quot;Typora&quot;&gt;&lt;/p&gt;
+&lt;p&gt;而且，Typora 支持&lt;a href=&quot;http://www.iplaysoft.com/tag/%E4%BB%A3%E7%A0%81&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码&lt;/a&gt;块的语法高亮（开发者的福音），对于表格、数学公式这些 MD 里比较难以输入的元素，Typora 也提供了相当方便的辅助；支持键盘快捷键；也提供了导出 Markdown 到 &lt;a href=&quot;http://www.iplaysoft.com/tag/html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML&lt;/a&gt; 和&lt;a href=&quot;http://www.iplaysoft.com/tag/pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PDF&lt;/a&gt; 的功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Typora/typora_screenshot.jpg&quot; alt=&quot;Typora&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果你的文章里用到一、二、三、四级标题等，界面右上角的「Outline」按钮也能自动为你的文章生成「大纲目录」。对，这一点不仅对作者有用，对于 MD 的「读者」来说也是非常方便的功能，再加上 Typora「一体化」的窗口，关联了 .MD 格式直接双击打开就能阅读 Markdown 文件，没有任何多余的功能，作为一款「纯粹的 Markdown 阅读器」也是非常实用的。&lt;/p&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;p&gt;总之，对于作者，熟练 &lt;a href=&quot;http://www.iplaysoft.com/tag/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown&lt;/a&gt; 的语法之后，Typora 给你带来的高效畅快的快感不是其他应用可以比拟的。而对于读者，Typora 极简干净的界面，加上小巧和极快的启动速度，也能完美地胜任「MD 阅读器」的&lt;a href=&quot;http://www.iplaysoft.com/tag/%E5%B7%A5%E4%BD%9C&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;工作&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Markdown 本来就是追求简洁和优雅而生的产物，使用复杂的工具反而是相悖的。极简的 Typora 没有任何多余的功能，纯粹却仍能提供高效自然的写作体验，无论对重度还是轻度用户都是非常理想的工具。而最让我兴奋的是，Typora 还是一款免费的软件！而且还跨平台支持 Windows 与 Mac！在天价 MD 编辑器满天飞的今天，这种良心优秀的软件真的让人打从心底里佩服其开发者！&lt;/p&gt;
+&lt;p&gt;相关文件下载地址&lt;/p&gt;
+&lt;p&gt;官方网站：&lt;a href=&quot;https://www.typora.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;访问&lt;/a&gt;&lt;br&gt;软件性质：免费&lt;br&gt;PS：同样比较有特色的 MD 编辑器还有 &lt;a href=&quot;http://www.iplaysoft.com/p/markdance&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdance&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文转载自:&lt;a href=&quot;http://www.iplaysoft.com/typora.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;异次元软件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Typora For Markdown 语法&lt;/p&gt;
+&lt;p&gt;数学表达式&lt;/p&gt;
+&lt;p&gt;要启用这个功能，首先到&lt;code&gt;Preference&lt;/code&gt;-&amp;gt;&lt;code&gt;Editor&lt;/code&gt;中启用。然后使用&lt;code&gt;$&lt;/code&gt;符号包裹Tex命令，例如：&lt;code&gt;$lim_{x \to \infty} \ exp(-x)=0$&lt;/code&gt;将产生如下的数学表达式：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1182605-6de962030ea181b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下标&lt;/p&gt;
+&lt;p&gt;下标使用&lt;code&gt;~&lt;/code&gt;包裹，例如：&lt;code&gt;H~2~O&lt;/code&gt;将产生水的分子式。&lt;/p&gt;
+&lt;p&gt;上标&lt;/p&gt;
+&lt;p&gt;上标使用&lt;code&gt;^&lt;/code&gt;包裹，例如：&lt;code&gt;y^2^=4&lt;/code&gt;将产生表达式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1182605-ee74782ebfa4a275.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;插入表情&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;:happy:&lt;/code&gt;输入高兴的表情，使用&lt;code&gt;:sad:&lt;/code&gt;输入悲伤的表情，使用&lt;code&gt;:cry:&lt;/code&gt;输入哭的表情等。以此类推！&lt;/p&gt;
+&lt;p&gt;下划线&lt;/p&gt;
+&lt;p&gt;用HTML的语法&lt;code&gt;Underline&lt;/code&gt;将产生下划线Underline.&lt;/p&gt;
+&lt;p&gt;删除线&lt;/p&gt;
+&lt;p&gt;GFM添加了删除文本的语法，这是标准的Markdown语法木有的。使用&lt;code&gt;~~&lt;/code&gt;包裹的文本将会具有删除的样式，例如&lt;code&gt;~删除文本~&lt;/code&gt;将产生&lt;del&gt;删除文本&lt;/del&gt;的样式。&lt;/p&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用`包裹的内容将会以代码样式显示，例如&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight autohotkey&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;使用`printf()`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;则会产生&lt;code&gt;printf()&lt;/code&gt;样式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;输入&lt;code&gt;~~~&lt;/code&gt;或者&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public Class HelloWorld&amp;#123;  System.out.println(&amp;quot;Hello World!&amp;quot;);&amp;#125;`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;强调&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  使用两个*号或者两个_包裹的内容将会被强调。例如&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用两个*号强调内容&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;使用两个下划线强调内容&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight gherkin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  将会输出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;使用两个\&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;号强调内容&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;使用两个下划线强调内容&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Typroa 推荐使用两个&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;号。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;斜体&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  在标准的Markdown语法中，&lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;和_包裹的内容会是斜体显示，但是GFM下划线一般用来分隔人名和代码变量名，因此我们推荐是用星号来包裹斜体内容。如果要显示星号，则使用转义：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;*&lt;/p&gt;
+&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;插入图片&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  我们可以通过拖拉的方式，将本地文件夹中的图片或者网络上的图片插入。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drag and drop image&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;插入URL连接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用尖括号包裹的url将产生一个连接，例如：``将产生连接:[&lt;span class=&quot;string&quot;&gt;www.baidu.com&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://www.baidu.com&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;如果是标准的url，则会自动产生连接，例如:[&lt;span class=&quot;string&quot;&gt;www.google.com&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://www.google.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;目录列表Table of Contents（TOC）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输入[toc]然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用‘ &lt;span class=&quot;emphasis&quot;&gt;***&lt;/span&gt; ‘或者‘ --- ‘，然后回车，来产生水平分割线。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;标注&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;我们可以对某一个词语进行标注。例如&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;某些人用过了才知道[^注释]&lt;br&gt;[^注释]:Somebody that I used to know.&lt;br&gt;&lt;figure class=&quot;highlight autohotkey&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;将产生：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注释&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;把鼠标放在`注释`上，将会有提示内容。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;表格&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;姓名&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;性别&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;毕业学校&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;工资&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;杨洋&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;男&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;重庆交通大学&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;3200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;峰哥&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;男&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;贵州大学&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;5000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;坑货&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;女&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;北京大学&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;2000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;figure class=&quot;highlight gherkin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;将产生:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|&lt;span class=&quot;string&quot;&gt; 姓名   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 性别   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 毕业学校   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 工资   &lt;/span&gt;|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|&lt;span class=&quot;string&quot;&gt; ---- &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; ---- &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; ------ &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; ---- &lt;/span&gt;|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|&lt;span class=&quot;string&quot;&gt; 杨洋   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 男    &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 重庆交通大学 &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 3200 &lt;/span&gt;|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|&lt;span class=&quot;string&quot;&gt; 峰哥   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 男    &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 贵州大学   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 5000 &lt;/span&gt;|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|&lt;span class=&quot;string&quot;&gt; 坑货   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 女    &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 北京大学   &lt;/span&gt;|&lt;span class=&quot;string&quot;&gt; 2000 &lt;/span&gt;|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;其中代码的第二行指定对齐的方式，第一个是左对齐，第二个和第三个是居中，最后一个是右对齐。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;数学表达式块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输入两个美元符号，然后回车，就可以输入数学表达式块了。例如：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; $$\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} \mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \\frac{\partial X}{\partial u} &amp;amp;  \frac{\partial Y}{\partial u} &amp;amp; 0 \\frac{\partial X}{\partial v} &amp;amp;  \frac{\partial Y}{\partial v} &amp;amp; 0 \\end{vmatrix}$$&lt;br&gt;&lt;figure class=&quot;highlight accesslog&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;将会产生:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;数学表达式块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;任务列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用如下的代码创建任务列表，在&lt;span class=&quot;string&quot;&gt;[]&lt;/span&gt;中输入x表示完成，也可以通过点击选择完成或者没完成。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] 吃饭&lt;/li&gt;
+&lt;li&gt;[ ] 逛街&lt;/li&gt;
+&lt;li&gt;[ ] 看电影&lt;/li&gt;
+&lt;li&gt;[ ] 约泡&lt;figure class=&quot;highlight gherkin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;任务列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输入+, -, &lt;span class=&quot;keyword&quot;&gt;*&lt;/span&gt;,创建无序的列表，使用任意数字开头，创建有序列表，例如：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;无序的列表&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tfboys&lt;/li&gt;
+&lt;li&gt;杨洋&lt;/li&gt;
+&lt;li&gt;我爱你&lt;figure class=&quot;highlight haml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**无序的列表**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&lt;span class=&quot;ruby&quot;&gt; tfboys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;-&lt;span class=&quot;ruby&quot;&gt; 杨洋&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;-&lt;span class=&quot;ruby&quot;&gt; 我爱你&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;有序的列表&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;苹果&lt;/li&gt;
+&lt;li&gt;香蕉&lt;/li&gt;
+&lt;li&gt;我都不喜欢&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;strong&quot;&gt;**有序的列表**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;1. &lt;/span&gt;苹果&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;2. &lt;/span&gt;香蕉&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;3. &lt;/span&gt;我都不喜欢&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;块引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用&amp;gt;来插入块引用。例如：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一个块引用！&lt;br&gt;```&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将产生：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一个块引用！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;标题&lt;/p&gt;
+&lt;p&gt;使用#表示一级标题，##表示二级标题，以此类推，有6个标题。&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;​        &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      一款专为MarkDown而生的写作工具——Typora。
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
     
   </entry>
   
