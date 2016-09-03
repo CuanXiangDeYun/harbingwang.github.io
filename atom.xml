@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-03T17:06:52.104Z</updated>
+  <updated>2016-09-03T17:48:01.399Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,21 +20,30 @@
     <link href="http://yoursite.com/2016/09/01/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E3%80%8AObjective-C%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3%E3%80%8B/"/>
     <id>http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/</id>
     <published>2016-08-31T17:10:03.000Z</published>
-    <updated>2016-09-03T17:06:52.104Z</updated>
+    <updated>2016-09-03T17:48:01.399Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91/%E3%80%8AObjective-C%E3%80%8B%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3.jpg&quot; alt=&quot;《Objective-C》编程全解&quot;&gt;&lt;br&gt;零零碎碎，记录自己学习此书的点滴。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Standing on Shoulders of Giants.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;第一章：《面向对象的编程》&quot;&gt;&lt;a href=&quot;#第一章：《面向对象的编程》&quot; class=&quot;headerlink&quot; title=&quot;第一章：《面向对象的编程》&quot;&gt;&lt;/a&gt;第一章：《面向对象的编程》&lt;/h3&gt;&lt;h4 id=&quot;1-1面向对象的编程&quot;&gt;&lt;a href=&quot;#1-1面向对象的编程&quot; class=&quot;headerlink&quot; title=&quot;1.1面向对象的编程&quot;&gt;&lt;/a&gt;1.1面向对象的编程&lt;/h4&gt;&lt;h5 id=&quot;对象-object&quot;&gt;&lt;a href=&quot;#对象-object&quot; class=&quot;headerlink&quot; title=&quot;对象(object)&quot;&gt;&lt;/a&gt;&lt;code&gt;对象(object)&lt;/code&gt;&lt;/h5&gt;&lt;blockquote&gt;
+&lt;h3 id=&quot;第1章：《面向对象的编程》&quot;&gt;&lt;a href=&quot;#第1章：《面向对象的编程》&quot; class=&quot;headerlink&quot; title=&quot;第1章：《面向对象的编程》&quot;&gt;&lt;/a&gt;第1章：《面向对象的编程》&lt;/h3&gt;&lt;h4 id=&quot;面向对象的编程&quot;&gt;&lt;a href=&quot;#面向对象的编程&quot; class=&quot;headerlink&quot; title=&quot;面向对象的编程&quot;&gt;&lt;/a&gt;面向对象的编程&lt;/h4&gt;&lt;h5 id=&quot;对象-object&quot;&gt;&lt;a href=&quot;#对象-object&quot; class=&quot;headerlink&quot; title=&quot;对象(object)&quot;&gt;&lt;/a&gt;对象(object)&lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;万物皆对象&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;对于什么东西适合作对象，什么不适合做对象。其实，并没有明显区别。只要我们构建出来的模型是没有问题的、能够解决问题的，万物都可以被当做是对象来处理。&lt;/p&gt;
 &lt;p&gt;真实世界中，某个独立存在的事物、一个整体的某个组成部分、有重要作用的人和部门等，都比较适合作为对象。特别是如果某个东西能够拟人化，也比较适合做对象。另外，多个素数、行列这些和数学有关的操作也可以被看做是对象。&lt;br&gt;相反，时间、空间、知识、伦理、感动等这些过于抽象的，不适合用数字来定性的东西，不适合作为对象。另外，难以被归类成“收到消息，进行处理”这个过程的，也不太适合当做对象。&lt;/p&gt;
 &lt;p&gt;对象有&lt;code&gt;属性(object-orientend)&lt;/code&gt;，并且能够接收&lt;code&gt;消息(message)&lt;/code&gt;。对象收到消息后，会对消息进行解析，完成相应的处理并返回结果，具体的处理方法和这个对象的内部实现相关，这里我们叫做&lt;code&gt;方法(method)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;因此，具备以下特征的东西，我们都可以称之为&lt;code&gt;对象(object)&lt;/code&gt;&lt;/p&gt;
-</content>
+&lt;ul&gt;
+&lt;li&gt;可以人为分辨出这是一个对象&lt;/li&gt;
+&lt;li&gt;拥有属性&lt;/li&gt;
+&lt;li&gt;能够向其他对象发送消息&lt;/li&gt;
+&lt;li&gt;能够接收消息，并作出相应的处理&lt;/li&gt;
+&lt;li&gt;消息的处理是通过对象的方法完成的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;像这种使用对象的概念对问题进行抽象化的方法叫做&lt;code&gt;面向对象&lt;/code&gt;，我们使用面向对象的思想进行编程的过程叫做&lt;code&gt;面向对象编程(OOP,Object-Oriented Program)&lt;/code&gt;，面向对象编程需要遵循的原则是&lt;code&gt;高内聚，低耦合&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&quot;类-class&quot;&gt;&lt;a href=&quot;#类-class&quot; class=&quot;headerlink&quot; title=&quot;类(class)&quot;&gt;&lt;/a&gt;类(class)&lt;/h5&gt;&lt;p&gt;类就是包含了一组对象的共有特性，它舍弃了每个具体对象的各种细节，把所有对象都具备的共同的部分抽象出来。&lt;br&gt;用类创建对象的过程叫做&lt;code&gt;实例化&lt;/code&gt;，生成的对象叫做&lt;code&gt;实例对象&lt;/code&gt;。简称为&lt;code&gt;实例(instance)&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;a href=&quot;#第2章：《Objective-C程序设计》&quot; class=&quot;headerlink&quot; title=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;/a&gt;第2章：《Objective-C程序设计》&lt;/h3&gt;</content>
     
     <summary type="html">
     
@@ -257,16 +266,16 @@
     <link href="http://yoursite.com/2016/06/27/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E3%80%8A%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%97%E3%80%8B/"/>
     <id>http://yoursite.com/2016/06/27/【读书笔记】之《岛上书店》/</id>
     <published>2016-06-26T17:10:03.000Z</published>
-    <updated>2016-09-03T17:20:09.832Z</updated>
+    <updated>2016-09-03T17:22:01.042Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91/%E5%B2%9B%E4%B8%8A%E4%B9%A6%E5%BA%972.jpg&quot; alt=&quot;岛上书店&quot;&gt;&lt;br&gt;岛上书店是间维多利亚风格的小屋，门廊上挂着褪色的招牌，上面写着：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;没有谁是一座孤岛，每本书都是一个世界。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;独自生活的难处在于不管弄出什么样子的烂摊子，都不得不自己去清理。不，独自生活的难处在于没人在于你是否心烦意乱。&lt;br&gt;（或许，这正是一种&lt;code&gt;无人问我粥可温,无人与我共黄昏&lt;/code&gt;的生活状态吧…）&lt;/p&gt;
-&lt;h2 id=&quot;《待宰的羔羊》&quot;&gt;&lt;a href=&quot;#《待宰的羔羊》&quot; class=&quot;headerlink&quot; title=&quot;《待宰的羔羊》&quot;&gt;&lt;/a&gt;&lt;strong&gt;《待宰的羔羊》&lt;/strong&gt;&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;书的第一章《待宰的羔羊》讲述的是文章主人公A.J.费克里在爱丽丝小岛上经营着这座岛上唯一一家小书店，生意清淡，书店即将面临危机。就在这个时候,出版社销售代表阿米莉娅闯进了他的书店，想为A.J推荐一些畅销书，在谈话中，A.J得知哈维去世了，他非常难过。哈维是这家书店之前的销售代表，长期为书店推荐书目，更重要的是，哈维几乎了解A.J所有的品味，知道A.J喜欢什么样的书目。就像A.J所说的那样，“或许我在哈维眼中只不过是他众多顾客中的一个，那么地微不足道，可是，哈维对我来讲，是多么的重要啊！”。也许，我能够明白A.J此时的心境，我们往往会对一些习惯了的东西产生依赖，难以自拔。正是这样，当我们在面临这些习惯了的东突然间离开的时候则会变得极度失落。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A.J对哈维的去世极度悲伤，因为自此以后，很少再会有人如此了解他了，他心情简直糟糕透了，晚上书店打烊后他独自在家喝闷酒，酒味尽兴之时，他把自己珍藏已久的《帖木儿》从用密码锁锁着的恒温玻璃棺中取了出来抱着入睡，以为这样会安全些。可谁曾想，一早起来，这本价值连城的《帖木儿》不见了…警方在他家查了很久，调查也持续了一个多月，依然毫无进展。命运从未眷顾过他，爱妻去世，书店危机，就连唯一值钱的宝贝也遭窃。他的人生陷入僵局，他的内心沦为荒岛。&lt;/p&gt;
+&lt;p&gt;独自生活的难处在于不管弄出什么样子的烂摊子，都不得不自己去清理。不，独自生活的难处在于没人在于你是否心烦意乱。（或许，这正是一种&lt;code&gt;无人问我粥可温,无人与我共黄昏&lt;/code&gt;的生活状态吧…）&lt;/p&gt;
+&lt;h2 id=&quot;《待宰的羔羊》&quot;&gt;&lt;a href=&quot;#《待宰的羔羊》&quot; class=&quot;headerlink&quot; title=&quot;《待宰的羔羊》&quot;&gt;&lt;/a&gt;&lt;strong&gt;《待宰的羔羊》&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;书的第一章《待宰的羔羊》讲述的是文章主人公A.J.费克里在爱丽丝小岛上经营着这座岛上唯一一家小书店，生意清淡，书店即将面临危机。就在这个时候,出版社销售代表阿米莉娅闯进了他的书店，想为A.J推荐一些畅销书，在谈话中，A.J得知哈维去世了，他非常难过。哈维是这家书店之前的销售代表，长期为书店推荐书目，更重要的是，哈维几乎了解A.J所有的品味，知道A.J喜欢什么样的书目。就像A.J所说的那样，“或许我在哈维眼中只不过是他众多顾客中的一个，那么地微不足道，可是，哈维对我来讲，是多么的重要啊！”。也许，我能够明白A.J此时的心境，我们往往会对一些习惯了的东西产生依赖，难以自拔。正是这样，当我们在面临这些习惯了的东突然间离开的时候则会变得极度失落。&lt;/p&gt;
+&lt;p&gt;A.J对哈维的去世极度悲伤，因为自此以后，很少再会有人如此了解他了，他心情简直糟糕透了，晚上书店打烊后他独自在家喝闷酒，酒味尽兴之时，他把自己珍藏已久的《帖木儿》从用密码锁锁着的恒温玻璃棺中取了出来抱着入睡，以为这样会安全些。可谁曾想，一早起来，这本价值连城的《帖木儿》不见了…警方在他家查了很久，调查也持续了一个多月，依然毫无进展。命运从未眷顾过他，爱妻去世，书店危机，就连唯一值钱的宝贝也遭窃。他的人生陷入僵局，他的内心沦为荒岛。&lt;/p&gt;
 &lt;h2 id=&quot;《咆哮营的幸运儿》&quot;&gt;&lt;a href=&quot;#《咆哮营的幸运儿》&quot; class=&quot;headerlink&quot; title=&quot;《咆哮营的幸运儿》&quot;&gt;&lt;/a&gt;&lt;strong&gt;《咆哮营的幸运儿》&lt;/strong&gt;&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;我们在二十岁有共鸣的东西，到了四十岁的时候不一定能产生共鸣，反之亦然。书本如此，生活亦如此。——A.J.&lt;/p&gt;
 &lt;/blockquote&gt;

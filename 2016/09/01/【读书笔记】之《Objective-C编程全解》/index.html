@@ -26,7 +26,7 @@ Standing on Shoulders of Giants.">
 
 Standing on Shoulders of Giants.">
 <meta property="og:image" content="http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91/%E3%80%8AObjective-C%E3%80%8B%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3.jpg">
-<meta property="og:updated_time" content="2016-09-03T17:06:52.104Z">
+<meta property="og:updated_time" content="2016-09-03T17:48:01.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Objective-C编程全解》">
 <meta name="twitter:description" content="零零碎碎，记录自己学习此书的点滴。
@@ -155,13 +155,13 @@ Standing on Shoulders of Giants.">
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -287,7 +287,7 @@ Standing on Shoulders of Giants.">
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-【读书笔记】之《Objective-C编程全解》" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -338,14 +338,23 @@ Standing on Shoulders of Giants.">
 <p>Standing on Shoulders of Giants.</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="第一章：《面向对象的编程》"><a href="#第一章：《面向对象的编程》" class="headerlink" title="第一章：《面向对象的编程》"></a>第一章：《面向对象的编程》</h3><h4 id="1-1面向对象的编程"><a href="#1-1面向对象的编程" class="headerlink" title="1.1面向对象的编程"></a>1.1面向对象的编程</h4><h5 id="对象-object"><a href="#对象-object" class="headerlink" title="对象(object)"></a><code>对象(object)</code></h5><blockquote>
+<h3 id="第1章：《面向对象的编程》"><a href="#第1章：《面向对象的编程》" class="headerlink" title="第1章：《面向对象的编程》"></a>第1章：《面向对象的编程》</h3><h4 id="面向对象的编程"><a href="#面向对象的编程" class="headerlink" title="面向对象的编程"></a>面向对象的编程</h4><h5 id="对象-object"><a href="#对象-object" class="headerlink" title="对象(object)"></a>对象(object)</h5><blockquote>
 <p>万物皆对象</p>
 </blockquote>
 <p>对于什么东西适合作对象，什么不适合做对象。其实，并没有明显区别。只要我们构建出来的模型是没有问题的、能够解决问题的，万物都可以被当做是对象来处理。</p>
 <p>真实世界中，某个独立存在的事物、一个整体的某个组成部分、有重要作用的人和部门等，都比较适合作为对象。特别是如果某个东西能够拟人化，也比较适合做对象。另外，多个素数、行列这些和数学有关的操作也可以被看做是对象。<br>相反，时间、空间、知识、伦理、感动等这些过于抽象的，不适合用数字来定性的东西，不适合作为对象。另外，难以被归类成“收到消息，进行处理”这个过程的，也不太适合当做对象。</p>
 <p>对象有<code>属性(object-orientend)</code>，并且能够接收<code>消息(message)</code>。对象收到消息后，会对消息进行解析，完成相应的处理并返回结果，具体的处理方法和这个对象的内部实现相关，这里我们叫做<code>方法(method)</code>。</p>
 <p>因此，具备以下特征的东西，我们都可以称之为<code>对象(object)</code></p>
-
+<ul>
+<li>可以人为分辨出这是一个对象</li>
+<li>拥有属性</li>
+<li>能够向其他对象发送消息</li>
+<li>能够接收消息，并作出相应的处理</li>
+<li>消息的处理是通过对象的方法完成的</li>
+</ul>
+<p>像这种使用对象的概念对问题进行抽象化的方法叫做<code>面向对象</code>，我们使用面向对象的思想进行编程的过程叫做<code>面向对象编程(OOP,Object-Oriented Program)</code>，面向对象编程需要遵循的原则是<code>高内聚，低耦合</code></p>
+<h5 id="类-class"><a href="#类-class" class="headerlink" title="类(class)"></a>类(class)</h5><p>类就是包含了一组对象的共有特性，它舍弃了每个具体对象的各种细节，把所有对象都具备的共同的部分抽象出来。<br>用类创建对象的过程叫做<code>实例化</code>，生成的对象叫做<code>实例对象</code>。简称为<code>实例(instance)</code>。</p>
+<h3 id="第2章：《Objective-C程序设计》"><a href="#第2章：《Objective-C程序设计》" class="headerlink" title="第2章：《Objective-C程序设计》"></a>第2章：《Objective-C程序设计》</h3>
       
     </div>
     
@@ -353,17 +362,17 @@ Standing on Shoulders of Giants.">
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/09/01/【读书笔记】之《Objective-C编程全解》/">《Objective-C编程全解》</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">HarbingWang</a></p>
-        <p><span>Created:</span>2016-09-01, 01:10:03</p>
-        <p><span>Updated:</span>2016-09-04, 01:06:52</p>
+        <p><span>本文标题:</span><a href="/2016/09/01/【读书笔记】之《Objective-C编程全解》/">《Objective-C编程全解》</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">HarbingWang</a></p>
+        <p><span>发布时间:</span>2016-09-01, 01:10:03</p>
+        <p><span>最后更新:</span>2016-09-04, 01:48:01</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/09/01/【读书笔记】之《Objective-C编程全解》/" title="《Objective-C编程全解》">http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/　　By HarbingWang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/01/【读书笔记】之《Objective-C编程全解》/" title="《Objective-C编程全解》">http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/　　作者: HarbingWang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -384,8 +393,8 @@ Standing on Shoulders of Giants.">
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章：《面向对象的编程》"><span class="toc-number">1.</span> <span class="toc-text">第一章：《面向对象的编程》</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1面向对象的编程"><span class="toc-number">1.1.</span> <span class="toc-text">1.1面向对象的编程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#对象-object"><span class="toc-number">1.1.1.</span> <span class="toc-text">对象(object)</span></a></li></ol></li></ol></li></ol>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1章：《面向对象的编程》"><span class="toc-number">1.</span> <span class="toc-text">第1章：《面向对象的编程》</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#面向对象的编程"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象的编程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#对象-object"><span class="toc-number">1.1.1.</span> <span class="toc-text">对象(object)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#类-class"><span class="toc-number">1.1.2.</span> <span class="toc-text">类(class)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2章：《Objective-C程序设计》"><span class="toc-number">2.</span> <span class="toc-text">第2章：《Objective-C程序设计》</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -394,10 +403,10 @@ Standing on Shoulders of Giants.">
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    yiliaConfig.toc = ["Hide", "Show", !!"true"];
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
 </script>
 
 
@@ -455,13 +464,13 @@ Standing on Shoulders of Giants.">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/08/21/1605实用开发写作工具集锦/" title="Next: 实用工具集锦">
+            <a href="/2016/08/21/1605实用开发写作工具集锦/" title="下一篇: 实用工具集锦">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -484,14 +493,14 @@ Standing on Shoulders of Giants.">
                 2015-2016 HarbingWang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE and HarbingWang<i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -501,7 +510,7 @@ Standing on Shoulders of Giants.">
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -521,9 +530,9 @@ Standing on Shoulders of Giants.">
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
