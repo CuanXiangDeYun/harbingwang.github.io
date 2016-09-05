@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HarbingWang</title>
-  <subtitle>编码砌字，读思旅行。</subtitle>
+  <subtitle>生活不止眼前的苟且，还有诗和远方。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-03T17:48:01.399Z</updated>
+  <updated>2016-09-05T16:03:33.556Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/09/01/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E3%80%8AObjective-C%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3%E3%80%8B/"/>
     <id>http://yoursite.com/2016/09/01/【读书笔记】之《Objective-C编程全解》/</id>
     <published>2016-08-31T17:10:03.000Z</published>
-    <updated>2016-09-03T17:48:01.399Z</updated>
+    <updated>2016-09-05T16:03:33.556Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91/%E3%80%8AObjective-C%E3%80%8B%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3.jpg&quot; alt=&quot;《Objective-C》编程全解&quot;&gt;&lt;br&gt;零零碎碎，记录自己学习此书的点滴。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -41,9 +41,29 @@
 &lt;li&gt;能够接收消息，并作出相应的处理&lt;/li&gt;
 &lt;li&gt;消息的处理是通过对象的方法完成的&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;像这种使用对象的概念对问题进行抽象化的方法叫做&lt;code&gt;面向对象&lt;/code&gt;，我们使用面向对象的思想进行编程的过程叫做&lt;code&gt;面向对象编程(OOP,Object-Oriented Program)&lt;/code&gt;，面向对象编程需要遵循的原则是&lt;code&gt;高内聚，低耦合&lt;/code&gt;&lt;/p&gt;
-&lt;h5 id=&quot;类-class&quot;&gt;&lt;a href=&quot;#类-class&quot; class=&quot;headerlink&quot; title=&quot;类(class)&quot;&gt;&lt;/a&gt;类(class)&lt;/h5&gt;&lt;p&gt;类就是包含了一组对象的共有特性，它舍弃了每个具体对象的各种细节，把所有对象都具备的共同的部分抽象出来。&lt;br&gt;用类创建对象的过程叫做&lt;code&gt;实例化&lt;/code&gt;，生成的对象叫做&lt;code&gt;实例对象&lt;/code&gt;。简称为&lt;code&gt;实例(instance)&lt;/code&gt;。&lt;/p&gt;
-&lt;h3 id=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;a href=&quot;#第2章：《Objective-C程序设计》&quot; class=&quot;headerlink&quot; title=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;/a&gt;第2章：《Objective-C程序设计》&lt;/h3&gt;</content>
+&lt;p&gt;像这种使用对象的概念对问题进行抽象化的方法叫做&lt;code&gt;面向对象&lt;/code&gt;，我们使用面向对象的思想进行编程的过程叫做&lt;code&gt;面向对象编程(OOP,Object-Oriented Program)&lt;/code&gt;，面向对象编程需要遵循的原则是&lt;code&gt;高内聚，低耦合&lt;/code&gt;。&lt;/p&gt;
+&lt;h5 id=&quot;类-class&quot;&gt;&lt;a href=&quot;#类-class&quot; class=&quot;headerlink&quot; title=&quot;类(class)&quot;&gt;&lt;/a&gt;类(class)&lt;/h5&gt;&lt;p&gt;类就是包含了一组对象的共有特性，它舍弃了每个具体对象的各种细节，把所有对象都具备的共同的部分抽象出来。&lt;br&gt;用类创建对象的过程叫做&lt;code&gt;实例化&lt;/code&gt;，生成的对象叫做&lt;code&gt;实例对象&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;a href=&quot;#第2章：《Objective-C程序设计》&quot; class=&quot;headerlink&quot; title=&quot;第2章：《Objective-C程序设计》&quot;&gt;&lt;/a&gt;第2章：《Objective-C程序设计》&lt;/h3&gt;&lt;h4 id=&quot;消息表达式&quot;&gt;&lt;a href=&quot;#消息表达式&quot; class=&quot;headerlink&quot; title=&quot;消息表达式&quot;&gt;&lt;/a&gt;消息表达式&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[obj msg]&lt;/code&gt;，这就是一个简单的消息表达式。其中，消息的接收者&lt;code&gt;obj&lt;/code&gt;是一个对象，消息&lt;code&gt;msg&lt;/code&gt;告诉这个对象要去做什么。请求一个对象做某件事某个操作时，就可以给它发送一个消息。消息表达式和C语言中的函数调用类似。&lt;/p&gt;
+&lt;p&gt;Objective-C 允许嵌套消息表达式，每个消息表达式的返回值都可以作为消息的接收者，继续接收消息。例如：&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[[[obj msg1] msg2] msg3]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以上，是一个简单的消息表达式。接下来，我们看这样一个消息表达式：&lt;br&gt;&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[position &lt;span class=&quot;string&quot;&gt;setTopMargin:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;100.0&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;leftMargin:&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;100.0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;消息是由消息关键字组成的，消息关键字的末尾有&lt;code&gt;:&lt;/code&gt;时，表示这个消息带有参数。&lt;code&gt;:&lt;/code&gt;后面紧跟的就是实际参数。这个参数可以是一个变量，也可以是一个表达式。发送带有多个参数的消息时，可以通过&lt;code&gt;关键字 : 变量&lt;/code&gt;的写法来完成调用。&lt;/p&gt;
+&lt;h4 id=&quot;消息选择器&quot;&gt;&lt;a href=&quot;#消息选择器&quot; class=&quot;headerlink&quot; title=&quot;消息选择器&quot;&gt;&lt;/a&gt;消息选择器&lt;/h4&gt;&lt;p&gt;函数是通过函数名来区别的，而消息则是通过消息名进行区分的。消息名又称为&lt;code&gt;消息选择器(message selector)&lt;/code&gt;、&lt;code&gt;选择器(selector)&lt;/code&gt;或者说&lt;code&gt;方法(method)&lt;/code&gt;。&lt;br&gt;消息名的命名方法:&lt;br&gt;消息名的命名规则同变量名的命名规则一样，一般都习惯以小写字母开头。如果选择器包含有多个单词，则第一个单词以小写字母开头，后面的每个单词的首字母都要大写。这种命名方式被称为&lt;code&gt;小驼峰命名法&lt;/code&gt;,例如上面的消息名：&lt;code&gt;setTopMargin: leftMargin:&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&quot;实例变量的生成&quot;&gt;&lt;a href=&quot;#实例变量的生成&quot; class=&quot;headerlink&quot; title=&quot;实例变量的生成&quot;&gt;&lt;/a&gt;实例变量的生成&lt;/h4&gt;&lt;p&gt;Objective-C通过向类发送消息来创建一个对象。通常我们通过给类名发送一个alloc消息的方式来生成一个对象：&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[[类名 alloc] init]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;alloc消息是为对象申请内存空间，alloc消息消息执行完以后就可以完成对象所需存储空间的分配，但是没有对对象进行初始化，需要继续调用&lt;code&gt;初始化方法(initializer)&lt;/code&gt;。&lt;br&gt;Cocoa中的初始化方法通常都是&lt;code&gt;init&lt;/code&gt;或者以&lt;code&gt;init&lt;/code&gt;开头的方法。不同的类会提供不同的初始化方法，同一个类也会有不同的初始化方法。&lt;br&gt;Cocoa中某个类的对象生成的完整方法通常是通过嵌套调用&lt;code&gt;alloc&lt;/code&gt;和&lt;code&gt;init&lt;/code&gt;来生成一个对象：&lt;br&gt;&lt;figure class=&quot;highlight clojure&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[[类名 alloc] init]&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;类的接口声明&quot;&gt;&lt;a href=&quot;#类的接口声明&quot; class=&quot;headerlink&quot; title=&quot;类的接口声明&quot;&gt;&lt;/a&gt;类的接口声明&lt;/h4&gt;&lt;p&gt;类的接口部分定义了类的实例变量和方法。&lt;br&gt;&lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;@interface&lt;/span&gt; 类名 : 父类名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//实例变量的定义;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 方法的声明;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如上所示，在Objective-C中，类的接口声明是以编译指令&lt;code&gt;@interface&lt;/code&gt;开头，并以&lt;code&gt;@end&lt;/code&gt;结尾的。&lt;br&gt;OC中类名的命名习惯首字母大写，采用的是&lt;code&gt;大驼峰命名法&lt;/code&gt;，比如&lt;code&gt;Person&lt;/code&gt;类；&lt;/p&gt;
+&lt;h5 id=&quot;实例变量的声明&quot;&gt;&lt;a href=&quot;#实例变量的声明&quot; class=&quot;headerlink&quot; title=&quot;实例变量的声明&quot;&gt;&lt;/a&gt;实例变量的声明&lt;/h5&gt;&lt;p&gt;实例变量的声明使用的是&lt;code&gt;变量类型 变量名&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&quot;方法的声明&quot;&gt;&lt;a href=&quot;#方法的声明&quot; class=&quot;headerlink&quot; title=&quot;方法的声明&quot;&gt;&lt;/a&gt;方法的声明&lt;/h5&gt;&lt;p&gt;在Objective-C中，方法的返回值需要用圆括号&lt;code&gt;()&lt;/code&gt;包住，当编译器看到减号或者加号右面的括号后，就会认为这是在声明方法的返回类型。假设下面这个方法的方法名是delegate。&lt;br&gt;&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;name&quot;&gt;id&lt;/span&gt;)delegate&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;参数的类型指定也是一样，用&lt;code&gt;()&lt;/code&gt;括起类型名并放置在参数之前。例如：一个具有两个整形的参数，且返回值是id对象的方法&lt;code&gt;cellAtRow：colum：&lt;/code&gt;定义如下所示，row和colum是参数。&lt;br&gt;&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (id)&lt;span class=&quot;string&quot;&gt;cellAtRow:&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)row &lt;span class=&quot;string&quot;&gt;colum:&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)colum;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;与C语言一样，当一个方法没有任何返回值时，我们就用&lt;code&gt;void&lt;/code&gt;表示。&lt;br&gt;&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;name&quot;&gt;void&lt;/span&gt;)setupViews&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;类的实现&quot;&gt;&lt;a href=&quot;#类的实现&quot; class=&quot;headerlink&quot; title=&quot;类的实现&quot;&gt;&lt;/a&gt;类的实现&lt;/h4&gt;&lt;p&gt;类的&lt;code&gt;实现部分&lt;/code&gt;以编译指令&lt;code&gt;@implementation&lt;/code&gt;开始，以&lt;code&gt;@end&lt;/code&gt;结束，具体如下：&lt;br&gt;&lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;@implementation&lt;/span&gt; 类名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 方法的实现&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;方法的实现部分的第一行代码和方法的申明部分完全相同,(方法声明时以&lt;code&gt;；&lt;/code&gt;结尾，在实现的时候需要删除。)之后写上&lt;code&gt;{}&lt;/code&gt;并将方法的具体实现写在&lt;code&gt;{}&lt;/code&gt;里面。&lt;/p&gt;
+&lt;p&gt;Notice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法中的&lt;code&gt;self&lt;/code&gt;指的是实例对象本身，是Objective-C内置的变量。&lt;code&gt;self&lt;/code&gt;支持赋值等操作，也可以被作为返回值返回。通过sele可以调用类的实例变量和方法。&lt;/li&gt;
+&lt;li&gt;有时候我们会看到&lt;code&gt;[super init]&lt;/code&gt;，他表示调用父类(NSObject,NSObject是所有类的基类)的初始化方法。如果父类返回nil，为空时，则不进行初始化。在后面的章节中将会有所涉及。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;第3章：《类和继承》&quot;&gt;&lt;a href=&quot;#第3章：《类和继承》&quot; class=&quot;headerlink&quot; title=&quot;第3章：《类和继承》&quot;&gt;&lt;/a&gt;第3章：《类和继承》&lt;/h3&gt;&lt;h4 id=&quot;消息表达式继承的概念&quot;&gt;&lt;a href=&quot;#消息表达式继承的概念&quot; class=&quot;headerlink&quot; title=&quot;消息表达式继承的概念&quot;&gt;&lt;/a&gt;消息表达式继承的概念&lt;/h4&gt;</content>
     
     <summary type="html">
     
@@ -237,27 +257,6 @@
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深圳</title>
-    <link href="http://yoursite.com/2016/06/27/%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%E4%B9%8B%E6%B7%B1%E5%9C%B3/"/>
-    <id>http://yoursite.com/2016/06/27/【摄影笔记】之深圳/</id>
-    <published>2016-06-26T17:18:12.000Z</published>
-    <updated>2016-06-26T17:26:57.925Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%2F20160626.jpg&quot; alt=&quot;深圳机场&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xso8o.com1.z0.glb.clouddn.com/imagesync%2F%E3%80%90%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0%E3%80%91%2F20160626.jpg&quot; alt=&quot;深
-    
-    </summary>
-    
-      <category term="摄影笔记" scheme="http://yoursite.com/categories/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0/"/>
-    
     
   </entry>
   
